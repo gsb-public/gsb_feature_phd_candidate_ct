@@ -861,7 +861,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   $field_instances['node-phd_candidate-field_image_single_public'] = array(
     'bundle' => 'phd_candidate',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended size for uploaded images is 600x440.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1784,6 +1784,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Middle Name');
   t('Photo');
   t('Professional Resume');
+  t('Recommended size for uploaded images is 600x440.');
   t('Research Statement');
   t('Salutation');
   t('Teaching Statement');
