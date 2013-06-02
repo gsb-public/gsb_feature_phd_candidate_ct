@@ -1553,6 +1553,93 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-phd_candidate-field_search_field'
+  $field_instances['node-phd_candidate-field_search_field'] = array(
+    'bundle' => 'phd_candidate',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'concat_field',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'concat_field_blank',
+        'weight' => 26,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tiny' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_search_field',
+    'label' => 'Search field',
+    'required' => 0,
+    'settings' => array(
+      'selected_fields' => array(
+        'concat_field_entity_label' => 'concat_field_entity_label',
+        'field_academic_area_single' => 'field_academic_area_single',
+        'field_addthis' => 0,
+        'field_body' => 'field_body',
+        'field_company_organization' => 'field_company_organization',
+        'field_dissertation' => 'field_dissertation',
+        'field_email' => 0,
+        'field_file_professional_resume' => 0,
+        'field_file_research_statement' => 0,
+        'field_file_single_public' => 0,
+        'field_file_teaching_statement' => 0,
+        'field_first_name' => 'field_first_name',
+        'field_image_single_public' => 0,
+        'field_is_placed' => 'field_is_placed',
+        'field_job_market_description' => 'field_job_market_description',
+        'field_job_market_paper' => 0,
+        'field_last_name' => 'field_last_name',
+        'field_link_google_scholar' => 0,
+        'field_location' => 'field_location',
+        'field_middle_name' => 'field_middle_name',
+        'field_person_fac_ref' => 'field_person_fac_ref',
+        'field_salutation' => 'field_salutation',
+        'field_work_in_progress' => 'field_work_in_progress',
+        'field_working_papers' => 'field_working_papers',
+        'field_year' => 'field_year',
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'concat_field',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'concat_field_default',
+      'weight' => 29,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-phd_candidate-field_work_in_progress'
   $field_instances['node-phd_candidate-field_work_in_progress'] = array(
     'bundle' => 'phd_candidate',
@@ -1787,6 +1874,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Recommended size for uploaded images is 600x440.');
   t('Research Statement');
   t('Salutation');
+  t('Search field');
   t('Teaching Statement');
   t('Title');
   t('Work In Progress');
