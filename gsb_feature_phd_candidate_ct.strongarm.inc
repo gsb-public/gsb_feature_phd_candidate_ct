@@ -89,7 +89,7 @@ function gsb_feature_phd_candidate_ct_strongarm() {
           'weight' => '26',
         ),
         'workbench_access' => array(
-          'weight' => '1',
+          'weight' => '25',
         ),
       ),
       'display' => array(),
