@@ -133,6 +133,70 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-phd_candidate-field_description'
+  $field_instances['node-phd_candidate-field_description'] = array(
+    'bundle' => 'phd_candidate',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'text_default',
+        'weight' => 39,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_description',
+    'label' => 'Summary',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 500,
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 15,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-phd_candidate-field_dissertation'
   $field_instances['node-phd_candidate-field_dissertation'] = array(
     'bundle' => 'phd_candidate',
@@ -463,7 +527,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 23,
+      'weight' => 24,
     ),
     'workbench_access_field' => 0,
   );
@@ -527,76 +591,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_job_market_description'
-  $field_instances['node-phd_candidate-field_job_market_description'] = array(
-    'bundle' => 'phd_candidate',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 16,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tiny' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_job_market_description',
-    'label' => 'Summary',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => 500,
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_truncate_html' => 0,
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 14,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-phd_candidate-field_job_market_paper'
   $field_instances['node-phd_candidate-field_job_market_paper'] = array(
     'bundle' => 'phd_candidate',
@@ -652,7 +646,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 19,
+      'weight' => 20,
     ),
     'workbench_access_field' => 0,
   );
@@ -1091,7 +1085,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -1153,7 +1147,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -1213,7 +1207,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 20,
+      'weight' => 21,
     ),
     'workbench_access_field' => 0,
   );
@@ -1277,7 +1271,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -1432,7 +1426,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'concat_field_default',
-      'weight' => 28,
+      'weight' => 29,
     ),
     'workbench_access_field' => 0,
   );
@@ -1496,7 +1490,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 18,
+      'weight' => 19,
     ),
     'workbench_access_field' => 0,
   );
@@ -1562,7 +1556,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 22,
+      'weight' => 23,
     ),
     'workbench_access_field' => 0,
   );
@@ -1628,7 +1622,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 21,
+      'weight' => 22,
     ),
     'workbench_access_field' => 0,
   );
@@ -1706,7 +1700,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 24,
+      'weight' => 25,
     ),
     'workbench_access_field' => 0,
   );
