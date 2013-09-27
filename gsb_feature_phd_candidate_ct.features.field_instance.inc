@@ -66,7 +66,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -128,7 +128,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 80,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -192,7 +192,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -322,7 +322,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 14,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -369,7 +369,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'file_directory' => '',
-      'file_extensions' => 'txt',
+      'file_extensions' => 'pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -446,7 +446,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 16,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -586,7 +586,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 13,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -645,7 +645,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -858,7 +858,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 17,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -934,7 +934,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 18,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -1086,7 +1086,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 19,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -1224,7 +1224,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -1286,7 +1286,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -1410,7 +1410,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -1534,17 +1534,21 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'field_academic_area_single' => 'field_academic_area_single',
         'field_addthis' => 0,
         'field_body' => 'field_body',
+        'field_company_organization' => 'field_company_organization',
         'field_dissertation' => 'field_dissertation',
         'field_email' => 0,
+        'field_file_professional_resume' => 0,
         'field_file_research_statement' => 0,
         'field_file_single_public' => 0,
         'field_file_teaching_statement' => 0,
         'field_first_name' => 'field_first_name',
         'field_image_single_public' => 0,
+        'field_is_placed' => 'field_is_placed',
         'field_job_market_description' => 'field_job_market_description',
         'field_job_market_paper' => 0,
         'field_last_name' => 'field_last_name',
         'field_link_google_scholar' => 0,
+        'field_location' => 'field_location',
         'field_middle_name' => 'field_middle_name',
         'field_person_fac_ref' => 'field_person_fac_ref',
         'field_salutation' => 'field_salutation',
@@ -1561,7 +1565,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'concat_field_default',
-      'weight' => 20,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -1625,7 +1629,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -1835,7 +1839,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 15,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );

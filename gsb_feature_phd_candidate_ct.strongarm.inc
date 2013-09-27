@@ -80,16 +80,16 @@ function gsb_feature_phd_candidate_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '19',
+          'weight' => '13',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '18',
+          'weight' => '12',
         ),
         'workbench_access' => array(
-          'weight' => '17',
+          'weight' => '11',
         ),
       ),
       'display' => array(),

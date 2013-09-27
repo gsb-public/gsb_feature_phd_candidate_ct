@@ -13,24 +13,27 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_educational_goals|node|phd_candidate|form';
-  $field_group->group_name = 'group_educational_goals';
+  $field_group->identifier = 'group_academic_information|node|phd_candidate|form';
+  $field_group->group_name = 'group_academic_information';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'phd_candidate';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Educational Goals',
-    'weight' => '8',
+    'label' => 'Academic Information',
+    'weight' => '2',
     'children' => array(
-      0 => 'field_dissertation',
-      1 => 'field_research_statement',
-      2 => 'field_teaching_statement',
-      3 => 'field_phd_research_interests',
+      0 => 'field_academic_area_single',
+      1 => 'field_dissertation',
+      2 => 'field_person_fac_ref',
+      3 => 'field_research_statement',
+      4 => 'field_teaching_statement',
+      5 => 'field_phd_research_interests',
+      6 => 'field_description',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Educational Goals',
+      'label' => 'Academic Information',
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
@@ -39,7 +42,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_educational_goals|node|phd_candidate|form'] = $field_group;
+  $export['group_academic_information|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -51,20 +54,23 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'ID Card',
-    'weight' => '5',
+    'label' => 'Personal Information',
+    'weight' => '1',
     'children' => array(
-      0 => 'field_academic_area_single',
-      1 => 'field_email',
-      2 => 'field_file_single_public',
+      0 => 'field_email',
+      1 => 'field_file_single_public',
+      2 => 'field_first_name',
       3 => 'field_image_single_public',
-      4 => 'field_link_google_scholar',
-      5 => 'field_link_linkedin',
-      6 => 'field_link_website',
+      4 => 'field_last_name',
+      5 => 'field_link_google_scholar',
+      6 => 'field_middle_name',
+      7 => 'field_salutation',
+      8 => 'field_link_linkedin',
+      9 => 'field_link_website',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'ID Card',
+      'label' => 'Personal Information',
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
@@ -115,7 +121,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Papers & Publications ',
-    'weight' => '13',
+    'weight' => '7',
     'children' => array(
       0 => 'group_job_market_paper',
       1 => 'group_publications',
