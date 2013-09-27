@@ -5,24 +5,3 @@
  */
 
 include_once 'gsb_feature_phd_candidate_ct.features.inc';
-
-/**
- * Implements hook_form_alter().
- */
-function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id) {
-
-	if ($form_id == 'phd_candidate_node_form') {
-	  
-	  $language = $form['language']['#value'];
-
-	  $form['field_academic_institution'][$language][0]['value']['#states'] = array(
-	    'visible' => array(
-	      ':input[name="field_job_display[' . $language . ']"]' => array(
-	        array('value' => 'placement_page'),
-	      ),
-	    ),
-	  );	
-
-	}	
-
-}
