@@ -23,6 +23,14 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
       ),
     );  
 
+    $form['field_year']['#states'] = array(
+	    'visible' => array(
+	      ':input[name="field_job_display[' . $language . ']"]' => array(
+	        array('value' => 'placement_page'),
+	      ),
+      ),
+		);    
+
   }  
 
 }
