@@ -7,8 +7,8 @@
 include_once 'gsb_feature_phd_candidate_ct.features.inc';
 
 /**
-+ * Implements hook_form_alter().
-+ */
+ * Implements hook_form_alter().
+ */
 function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'phd_candidate_node_form') {
