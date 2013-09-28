@@ -16,9 +16,9 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
     unset($form['field_working_papers']['und'][0]['field_title']);
 
     unset($form['field_working_papers']['und'][0]['field_link_single']['und'][0]['#title']);
-		unset($form['field_work_in_progress']['und'][0]['field_link_single']['und'][0]['#title']);
-		unset($form['field_publications']['und'][0]['field_link_single']['und'][0]['#title']);
-		unset($form['field_link_single']['und'][0]['#title']);
+    unset($form['field_work_in_progress']['und'][0]['field_link_single']['und'][0]['#title']);
+    unset($form['field_publications']['und'][0]['field_link_single']['und'][0]['#title']);
+    unset($form['field_link_single']['und'][0]['#title']);
 
     $language = $form['language']['#value'];
 
@@ -31,12 +31,12 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
     );  
 
     $form['field_year']['#states'] = array(
-	    'visible' => array(
-	      ':input[name="field_job_display[' . $language . ']"]' => array(
-	        array('value' => 'placement_page'),
-	      ),
+      'visible' => array(
+        ':input[name="field_job_display[' . $language . ']"]' => array(
+          array('value' => 'placement_page'),
+        ),
       ),
-		);    
+    );    
 
   }  
 
