@@ -24,12 +24,12 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_academic_area_single',
-      1 => 'field_dissertation',
-      2 => 'field_person_fac_ref',
-      3 => 'field_research_statement',
-      4 => 'field_teaching_statement',
-      5 => 'field_phd_research_interests',
-      6 => 'field_description',
+      1 => 'field_description',
+      2 => 'field_dissertation',
+      3 => 'field_person_fac_ref',
+      4 => 'field_phd_research_interests',
+      5 => 'field_research_statement',
+      6 => 'field_teaching_statement',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -63,10 +63,10 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       3 => 'field_image_single_public',
       4 => 'field_last_name',
       5 => 'field_link_google_scholar',
-      6 => 'field_middle_name',
-      7 => 'field_salutation',
-      8 => 'field_link_linkedin',
-      9 => 'field_link_website',
+      6 => 'field_link_linkedin',
+      7 => 'field_link_website',
+      8 => 'field_middle_name',
+      9 => 'field_salutation',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -94,9 +94,9 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'label' => 'Job Market Paper',
     'weight' => '22',
     'children' => array(
-      0 => 'field_link_single',
-      1 => 'field_file_job_market_paper',
-      2 => 'field_job_market_paper_desc',
+      0 => 'field_file_job_market_paper',
+      1 => 'field_job_market_paper_desc',
+      2 => 'field_link_single',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -125,8 +125,8 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'children' => array(
       0 => 'group_job_market_paper',
       1 => 'group_publications',
-      2 => 'group_working_papers',
-      3 => 'group_work_in_progress',
+      2 => 'group_work_in_progress',
+      3 => 'group_working_papers',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
