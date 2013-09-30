@@ -69,6 +69,4 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
   }  
 
-  dpm($form);
-
 }
