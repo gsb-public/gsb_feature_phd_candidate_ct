@@ -38,6 +38,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -98,6 +104,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -160,6 +172,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -224,6 +242,15 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -293,6 +320,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -354,6 +387,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -412,6 +451,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -475,6 +520,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       ),
       'ical' => array(
         'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -547,6 +598,17 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'module' => 'gsb_field_formatter',
+        'settings' => array(
+          'conditions' => array(),
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'gsb_field_formatter_image',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -623,6 +685,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -677,6 +745,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -741,6 +815,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -809,6 +889,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -891,6 +977,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -966,6 +1058,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1043,6 +1141,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1119,6 +1223,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1187,6 +1297,16 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'conditions' => array(),
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1257,6 +1377,15 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1268,7 +1397,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_phd_research_interests',
     'label' => 'Research Interests',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'linkit' => array(
         'enable' => 0,
@@ -1324,6 +1453,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1378,6 +1513,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1442,6 +1583,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1509,6 +1656,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1598,6 +1751,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1667,6 +1826,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1733,6 +1898,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1798,6 +1969,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
