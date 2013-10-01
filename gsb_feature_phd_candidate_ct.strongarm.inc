@@ -21,7 +21,7 @@ function gsb_feature_phd_candidate_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_phd_candidate';
-  $strongarm->value = '[node:field-salutation] [node:field-first-name] [node:field-middle-name] [node:field-last-name]';
+  $strongarm->value = '[node:field-salutation] [node:field-first-name] [node:field-middle-name] [node:field-last-name][node:field-suffix-name]';
   $export['auto_entitylabel_pattern_node_phd_candidate'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -95,19 +95,19 @@ function gsb_feature_phd_candidate_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '10',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '9',
         ),
         'workbench_access' => array(
-          'weight' => '11',
+          'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '12',
         ),
       ),
       'display' => array(),

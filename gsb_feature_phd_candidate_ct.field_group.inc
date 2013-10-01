@@ -67,6 +67,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       7 => 'field_link_website',
       8 => 'field_middle_name',
       9 => 'field_salutation',
+      10 => 'field_suffix_name',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -121,7 +122,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Papers & Publications ',
-    'weight' => '7',
+    'weight' => '3',
     'children' => array(
       0 => 'group_job_market_paper',
       1 => 'group_publications',
