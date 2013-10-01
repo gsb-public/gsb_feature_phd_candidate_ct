@@ -13,14 +13,43 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
   if ($form_id == 'phd_candidate_node_form') {
 
-    unset($form['field_working_papers']['und'][0]['field_title']);
-
-    unset($form['field_working_papers']['und'][0]['field_link_single']['und'][0]['#title']);
-    unset($form['field_work_in_progress']['und'][0]['field_link_single']['und'][0]['#title']);
-    unset($form['field_publications']['und'][0]['field_link_single']['und'][0]['#title']);
-    unset($form['field_link_single']['und'][0]['#title']);
-
     $language = $form['language']['#value'];
+
+    foreach ($form['field_working_papers'][$language] as $key => &$value) {
+      if (!is_int($key)) {
+        continue;
+      }
+      unset($form['field_working_papers'][$language][$key]['field_link_single'][$language][0]['#title']);
+    }
+
+    foreach ($form['field_work_in_progress'][$language] as $key => &$value) {
+      if (!is_int($key)) {
+        continue;
+      }
+      unset($form['field_work_in_progress'][$language][$key]['field_link_single'][$language][0]['#title']);
+    }   
+
+    foreach ($form['field_publications'][$language] as $key => &$value) {
+      if (!is_int($key)) {
+        continue;
+      }
+      dpm('unsetting key = '.$key);
+      unset($form['field_publications'][$language][$key]['field_link_single'][$language][0]['#title']);
+    }  
+
+    foreach ($form['field_link_single'][$language] as $key => &$value) {
+      if (!is_int($key)) {
+        continue;
+      }
+      unset($form['field_link_single'][$language][$key]['#title']);
+    }     
+
+    foreach ($form['field_working_papers'][$language] as $key => &$value) {
+      if (!is_int($key)) {
+        continue;
+      }
+      unset($form['field_working_papers'][$language][$key]['field_title']);  
+    }         
 
     $form['field_academic_institution'][$language][0]['value']['#states'] = array(
       'visible' => array(
