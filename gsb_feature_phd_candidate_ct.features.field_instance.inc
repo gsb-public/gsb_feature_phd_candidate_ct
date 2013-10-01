@@ -2071,6 +2071,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Dissertation Title');
   t('Email');
   t('Faculty Advisors');
+  t('Faculty look-up');
   t('First Name');
   t('Go to the LinkedIn <a href="https://www.linkedin.com/profile/public-profile-settings">Public Profile Settings page</a> to get your Public Profile link.');
   t('Google Scholar');
