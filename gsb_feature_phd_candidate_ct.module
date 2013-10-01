@@ -34,21 +34,21 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
         continue;
       }
       unset($form['field_publications'][$language][$key]['field_link_single'][$language][0]['#title']);
-    }  
+    }
 
     foreach ($form['field_link_single'][$language] as $key => &$value) {
       if (!is_int($key)) {
         continue;
       }
       unset($form['field_link_single'][$language][$key]['#title']);
-    }     
+    } 
 
     foreach ($form['field_working_papers'][$language] as $key => &$value) {
       if (!is_int($key)) {
         continue;
       }
       unset($form['field_working_papers'][$language][$key]['field_title']);  
-    }         
+    } 
 
     $form['field_academic_institution'][$language][0]['value']['#states'] = array(
       'visible' => array(
@@ -56,7 +56,7 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
           array('value' => 'placement_page'),
         ),
       ),
-    );  
+    ); 
 
     $form['field_year']['#states'] = array(
       'visible' => array(
@@ -64,9 +64,9 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
           array('value' => 'placement_page'),
         ),
       ),
-    );    
+    ); 
 
-  }  
+  } 
 
 }
 
