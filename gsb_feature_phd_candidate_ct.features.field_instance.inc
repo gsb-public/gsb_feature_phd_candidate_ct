@@ -15,7 +15,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select your primary academic area',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -203,7 +203,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 500,
+        'maxlength_js' => 150,
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'maxlength_js_truncate_html' => 0,
@@ -429,7 +429,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   $field_instances['node-phd_candidate-field_file_single_public'] = array(
     'bundle' => 'phd_candidate',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'PDF only',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -574,7 +574,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   $field_instances['node-phd_candidate-field_image_single_public'] = array(
     'bundle' => 'phd_candidate',
     'deleted' => 0,
-    'description' => 'Recommended size for uploaded images is 600x440.',
+    'description' => 'Recommended size: 271x271',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -658,7 +658,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => array(
       0 => array(
-        'value' => 'job_market_page',
+        'value' => 'dont_display',
       ),
     ),
     'deleted' => 0,
@@ -867,7 +867,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '(Google Scholar public profile URL) e.g. scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -930,6 +930,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'enable' => 0,
         'insert_plugin' => '',
       ),
+      'rel_remove' => 'default',
       'title' => 'none',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -954,7 +955,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Go to the LinkedIn Public Profile Settings page to get your Public Profile. https://www.linkedin.com/profile/public-profile-settings',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1118,7 +1119,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'e.g. www.personalwebsite.com',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1274,7 +1275,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Faculty look-up',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2023,6 +2024,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('(Google Scholar public profile URL) e.g. scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en');
   t('Academic Area');
   t('Academic Institution');
   t('CV');
@@ -2031,26 +2033,31 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Dissertation Title');
   t('Email');
   t('Faculty Advisors');
+  t('Faculty look-up');
   t('First Name');
+  t('Go to the LinkedIn Public Profile Settings page to get your Public Profile. https://www.linkedin.com/profile/public-profile-settings');
   t('Google Scholar Link');
   t('Graduation Year');
   t('Last Name');
   t('LinkedIn Link');
   t('Middle Name');
+  t('PDF only');
   t('Paper');
   t('Personal Website Link');
   t('Photo');
   t('Publications');
-  t('Recommended size for uploaded images is 600x440.');
+  t('Recommended size: 271x271');
   t('Research Interests');
   t('Research Statement');
   t('Salutation');
   t('Search field');
+  t('Select your primary academic area');
   t('Summary');
   t('Teaching Statement');
   t('Title');
   t('Work In Progress');
   t('Working Papers');
+  t('e.g. www.personalwebsite.com');
 
   return $field_instances;
 }
