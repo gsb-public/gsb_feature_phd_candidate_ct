@@ -33,7 +33,6 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
       if (!is_int($key)) {
         continue;
       }
-      dpm('unsetting key = '.$key);
       unset($form['field_publications'][$language][$key]['field_link_single'][$language][0]['#title']);
     }  
 
