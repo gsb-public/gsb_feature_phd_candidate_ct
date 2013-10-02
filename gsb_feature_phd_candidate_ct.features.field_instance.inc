@@ -200,7 +200,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 150,
+        'maxlength_js' => 750,
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'maxlength_js_truncate_html' => 0,
@@ -426,12 +426,14 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => 'PDF only',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
+        'label' => 'hidden',
+        'module' => 'gsb_field_formatter',
         'settings' => array(
           'conditions' => array(),
+          'file_view_mode' => 'default',
+          'text' => 'CV',
         ),
-        'type' => 'file_default',
+        'type' => 'gsb_field_formatter_download_link',
         'weight' => 3,
       ),
       'featured' => array(
@@ -855,7 +857,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '(Google Scholar public profile URL) e.g. scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en',
+    'description' => '(Google Scholar public profile URL) e.g. <a href="http://scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en" target="_blank">scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en</a>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -863,7 +865,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
         ),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 4,
       ),
       'featured' => array(
@@ -900,7 +902,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_link_google_scholar',
-    'label' => 'Google Scholar Link',
+    'label' => 'Google Scholar',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -943,7 +945,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Go to the LinkedIn <a href="https://www.linkedin.com/profile/public-profile-settings">Public Profile Settings page</a> to get your Public Profile.',
+    'description' => 'Go to the LinkedIn <a href="https://www.linkedin.com/profile/public-profile-settings">Public Profile Settings page</a> to get your Public Profile link.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -951,7 +953,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
         ),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 5,
       ),
       'featured' => array(
@@ -982,7 +984,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_link_linkedin',
-    'label' => 'LinkedIn Link',
+    'label' => 'LinkedIn',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -1112,7 +1114,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
         ),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 6,
       ),
       'featured' => array(
@@ -1143,7 +1145,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_link_website',
-    'label' => 'Personal Website Link',
+    'label' => 'Personal Website',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -1260,7 +1262,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Faculty look-up',
+    'description' => 'Begin typing to look up your faculty advisor(s).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2053,26 +2055,26 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('(Google Scholar public profile URL) e.g. scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en');
+  t('(Google Scholar public profile URL) e.g. <a href="http://scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en" target="_blank">scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en</a>');
   t('Academic Area');
   t('Academic Institution');
+  t('Begin typing to look up your faculty advisor(s).');
   t('CV');
   t('Description');
   t('Display Settings (for Administrative use only)');
   t('Dissertation Title');
   t('Email');
   t('Faculty Advisors');
-  t('Faculty look-up');
   t('First Name');
-  t('Go to the LinkedIn <a href="https://www.linkedin.com/profile/public-profile-settings">Public Profile Settings page</a> to get your Public Profile.');
-  t('Google Scholar Link');
+  t('Go to the LinkedIn <a href="https://www.linkedin.com/profile/public-profile-settings">Public Profile Settings page</a> to get your Public Profile link.');
+  t('Google Scholar');
   t('Graduation Year');
   t('Last Name');
-  t('LinkedIn Link');
+  t('LinkedIn');
   t('Middle Name');
   t('PDF only');
   t('Paper');
-  t('Personal Website Link');
+  t('Personal Website');
   t('Photo');
   t('Publications');
   t('Recommended size: 271x271');
