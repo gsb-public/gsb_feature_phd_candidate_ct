@@ -234,7 +234,8 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_email',
-      1 => 'group_wrapper_link',
+      1 => 'phd_address',
+      2 => 'group_wrapper_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -296,7 +297,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = 'group_wrapper_information';
   $field_group->data = array(
     'label' => 'Link wrapper',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_file_single_public',
       1 => 'field_link_google_scholar',
