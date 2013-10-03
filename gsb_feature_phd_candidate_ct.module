@@ -13,6 +13,9 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
   if ($form_id == 'phd_candidate_node_form') {
 
+    // add a validation function
+    $form['#validate'][] = "gsb_feature_phd_candidate_ct_validate";
+
     $language = $form['language']['#value'];
 
     foreach ($form['field_working_papers'][$language] as $key => &$value) {
@@ -70,3 +73,71 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
 }
 
+function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
+
+  $research_interest_required_message = t('Research Interest field is required.');
+  $research_interest_error_key = 'field_phd_research_interests][und][0][value';
+
+  $faculty_advisor_required_message = t('Faculty Advisor field is required.');
+  $faculty_advisor_error_key = 'field_person_fac_ref][und][0][target_id';  
+
+  $errors = form_get_errors();
+
+  if ($errors) {
+
+    // Clear errors.
+    form_clear_error();
+
+    // Clear error messages.
+    $error_messages = drupal_get_messages('error');
+
+    // Initialize an array where removed error messages are stored.
+    $removed_messages = array();  
+
+    // Check if there is an error for the research interest field
+    $research_interest_error = false;
+
+    // Check if there is an error for the faculty advisor field
+    $faculty_advisor_error = false;    
+
+    foreach ($errors as $name => $error_message) {
+      if ($name == $research_interest_error_key) {
+        $removed_messages[] = $error_message;
+        unset($errors[$name]);
+        $research_interest_error = true;
+      }
+      if ($name == $faculty_advisor_error_key) {
+        $removed_messages[] = $error_message;
+        unset($errors[$name]);
+        $faculty_advisor_error = true;
+      }
+    }
+
+    // Reinstate remaining errors.
+    foreach ($errors as $name => $error) {
+      form_set_error($name, $error);
+      // form_set_error() calls drupal_set_message(), so we have to filter out
+      // these from the error messages as well.
+      $removed_messages[] = $error;
+    }
+
+    if ($faculty_advisor_error) {
+      // Now add it back with the new text we want
+      form_set_error($faculty_advisor_error_key, $faculty_advisor_required_message);
+    }  
+
+    if ($research_interest_error) {
+      // Now add it back with the new text we want
+      form_set_error($research_interest_error_key, $research_interest_required_message);
+    }
+
+    // Reinstate remaining error messages (which, at this point, are messages that
+    // were originated outside of the validation process).
+    foreach (array_diff($error_messages['error'], $removed_messages) as $message) {
+      drupal_set_message($message, 'error');
+    }
+
+  }
+
+
+}  
