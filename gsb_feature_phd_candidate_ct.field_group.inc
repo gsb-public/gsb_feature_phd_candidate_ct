@@ -220,5 +220,139 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   );
   $export['group_working_papers|node|phd_candidate|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_information|node|phd_candidate|default';
+  $field_group->group_name = 'group_wrapper_information';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'phd_candidate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Information wrapper',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_email',
+      1 => 'group_wrapper_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Information wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_information|node|phd_candidate|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_jobpaper|node|phd_candidate|default';
+  $field_group->group_name = 'group_wrapper_jobpaper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'phd_candidate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Job Market Paper',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_file_job_market_paper',
+      1 => 'field_job_market_paper_desc',
+      2 => 'field_link_single',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Job Market Paper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_jobpaper|node|phd_candidate|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_link|node|phd_candidate|default';
+  $field_group->group_name = 'group_wrapper_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'phd_candidate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_wrapper_information';
+  $field_group->data = array(
+    'label' => 'Link wrapper',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_file_single_public',
+      1 => 'field_link_google_scholar',
+      2 => 'field_link_linkedin',
+      3 => 'field_link_website',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Link wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_link|node|phd_candidate|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_name|node|phd_candidate|default';
+  $field_group->group_name = 'group_wrapper_name';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'phd_candidate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Name wrapper',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_first_name',
+      1 => 'field_last_name',
+      2 => 'field_middle_name',
+      3 => 'field_salutation',
+      4 => 'field_suffix_name',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Name wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_name|node|phd_candidate|default'] = $field_group;
+
   return $export;
 }

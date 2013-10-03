@@ -23,7 +23,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
       'featured' => array(
@@ -88,7 +88,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'featured' => array(
         'label' => 'above',
@@ -150,13 +150,13 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -223,7 +223,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'featured' => array(
         'label' => 'above',
@@ -361,13 +361,14 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
+        'label' => 'hidden',
+        'module' => 'file_entity',
         'settings' => array(
           'conditions' => array(),
+          'text' => 'PDF',
         ),
-        'type' => 'file_default',
-        'weight' => 16,
+        'type' => 'file_download_link',
+        'weight' => 11,
       ),
       'featured' => array(
         'label' => 'above',
@@ -427,13 +428,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'gsb_field_formatter',
+        'module' => 'file_entity',
         'settings' => array(
           'conditions' => array(),
-          'file_view_mode' => 'default',
           'text' => 'CV',
         ),
-        'type' => 'gsb_field_formatter_download_link',
+        'type' => 'file_download_link',
         'weight' => 3,
       ),
       'featured' => array(
@@ -664,7 +664,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'featured' => array(
         'label' => 'above',
@@ -719,10 +719,13 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'text_default',
+        'weight' => 12,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1030,10 +1033,13 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => 'Open in a new window when linking externally or to a PDF file.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'link_default',
+        'weight' => 10,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1269,10 +1275,10 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'conditions' => array(),
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 12,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1351,7 +1357,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 6,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1423,7 +1429,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 17,
+        'weight' => 13,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1484,7 +1490,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 7,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1624,7 +1630,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1712,7 +1718,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => 'e.g. Jr., Sr., III, PhD, BA, etc.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
@@ -1786,7 +1792,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 8,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1857,7 +1863,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 19,
+        'weight' => 15,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1893,7 +1899,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_work_in_progress',
-    'label' => 'Work In Progress',
+    'label' => 'Work in Progress',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1922,10 +1928,10 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'module' => 'field_collection',
         'settings' => array(
           'conditions' => array(),
-          'view_mode' => 'full',
+          'view_mode' => 'phd_job_market_candidate',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 18,
+        'weight' => 14,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1988,7 +1994,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'featured' => array(
         'label' => 'above',
@@ -2088,7 +2094,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Summary');
   t('Teaching Statement');
   t('Title');
-  t('Work In Progress');
+  t('Work in Progress');
   t('Working Papers');
   t('e.g. Jr., Sr., III, PhD, BA, etc.');
   t('e.g. www.personalwebsite.com');
