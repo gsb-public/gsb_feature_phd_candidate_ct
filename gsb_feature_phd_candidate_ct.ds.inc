@@ -125,6 +125,11 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'phd_candidate';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'phd_address' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'field_academic_area_single' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -321,6 +326,37 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function gsb_feature_phd_candidate_ct_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'phd_address';
+  $ds_field->label = 'PhD address';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<div>PhD Program Office</div>
+<div>Graduate School of Business</div>
+<div>Stanford University</div>
+<div>655 Knight Way</div>
+<div>Stanford, CA 94305</div>',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['phd_address'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
@@ -436,57 +472,59 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
       'left' => array(
         0 => 'field_image_single_public',
         1 => 'field_academic_area_single',
-        2 => 'group_wrapper_information',
-        3 => 'field_email',
-        4 => 'field_file_single_public',
-        6 => 'field_link_google_scholar',
-        8 => 'group_wrapper_link',
-        10 => 'field_link_linkedin',
+        2 => 'field_email',
+        3 => 'group_wrapper_information',
+        4 => 'group_wrapper_link',
+        5 => 'field_file_single_public',
+        8 => 'phd_address',
+        9 => 'field_link_google_scholar',
+        11 => 'field_link_linkedin',
         12 => 'field_link_website',
       ),
       'right' => array(
-        5 => 'group_wrapper_name',
+        6 => 'group_wrapper_name',
         7 => 'field_description',
-        9 => 'field_person_fac_ref',
-        11 => 'field_phd_research_interests',
-        13 => 'field_salutation',
+        10 => 'field_person_fac_ref',
+        13 => 'field_phd_research_interests',
         14 => 'field_research_statement',
-        15 => 'field_teaching_statement',
+        15 => 'field_salutation',
         16 => 'field_first_name',
-        17 => 'group_wrapper_jobpaper',
-        18 => 'field_middle_name',
-        19 => 'field_link_single',
+        17 => 'field_teaching_statement',
+        18 => 'group_wrapper_jobpaper',
+        19 => 'field_middle_name',
         20 => 'field_last_name',
-        21 => 'field_file_job_market_paper',
-        22 => 'field_job_market_paper_desc',
-        23 => 'field_publications',
-        24 => 'field_working_papers',
-        25 => 'field_work_in_progress',
-        26 => 'field_suffix_name',
+        21 => 'field_link_single',
+        22 => 'field_file_job_market_paper',
+        23 => 'field_job_market_paper_desc',
+        24 => 'field_publications',
+        25 => 'field_working_papers',
+        26 => 'field_work_in_progress',
+        27 => 'field_suffix_name',
       ),
     ),
     'fields' => array(
       'field_image_single_public' => 'left',
       'field_academic_area_single' => 'left',
-      'group_wrapper_information' => 'left',
       'field_email' => 'left',
+      'group_wrapper_information' => 'left',
+      'group_wrapper_link' => 'left',
       'field_file_single_public' => 'left',
       'group_wrapper_name' => 'right',
-      'field_link_google_scholar' => 'left',
       'field_description' => 'right',
-      'group_wrapper_link' => 'left',
+      'phd_address' => 'left',
+      'field_link_google_scholar' => 'left',
       'field_person_fac_ref' => 'right',
       'field_link_linkedin' => 'left',
-      'field_phd_research_interests' => 'right',
       'field_link_website' => 'left',
-      'field_salutation' => 'right',
+      'field_phd_research_interests' => 'right',
       'field_research_statement' => 'right',
-      'field_teaching_statement' => 'right',
+      'field_salutation' => 'right',
       'field_first_name' => 'right',
+      'field_teaching_statement' => 'right',
       'group_wrapper_jobpaper' => 'right',
       'field_middle_name' => 'right',
-      'field_link_single' => 'right',
       'field_last_name' => 'right',
+      'field_link_single' => 'right',
       'field_file_job_market_paper' => 'right',
       'field_job_market_paper_desc' => 'right',
       'field_publications' => 'right',
