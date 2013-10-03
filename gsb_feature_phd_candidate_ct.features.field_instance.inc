@@ -1027,7 +1027,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Open in a new window when linking externally or to a PDF file.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1709,7 +1709,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'e.g. Jr., Sr., III, PhD, BA, etc.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2072,6 +2072,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Last Name');
   t('LinkedIn');
   t('Middle Name');
+  t('Open in a new window when linking externally or to a PDF file.');
   t('PDF only');
   t('Paper');
   t('Personal Website');
@@ -2089,6 +2090,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Title');
   t('Work In Progress');
   t('Working Papers');
+  t('e.g. Jr., Sr., III, PhD, BA, etc.');
   t('e.g. www.personalwebsite.com');
 
   return $field_instances;
