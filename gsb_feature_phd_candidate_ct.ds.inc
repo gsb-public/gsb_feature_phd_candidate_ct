@@ -545,6 +545,51 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
   );
   $export['node|phd_candidate|default'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|phd_candidate|phd_job_market_candidate';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'phd_candidate';
+  $ds_layout->view_mode = 'phd_job_market_candidate';
+  $ds_layout->layout = 'ds_4col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'first' => array(
+        0 => 'field_link_single',
+        1 => 'field_image_single_public',
+      ),
+      'second' => array(
+        2 => 'field_person_fac_ref',
+      ),
+      'third' => array(
+        3 => 'field_dissertation',
+      ),
+      'fourth' => array(
+        4 => 'field_phd_research_interests',
+      ),
+    ),
+    'fields' => array(
+      'field_link_single' => 'first',
+      'field_image_single_public' => 'first',
+      'field_person_fac_ref' => 'second',
+      'field_dissertation' => 'third',
+      'field_phd_research_interests' => 'fourth',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'first' => 'div',
+      'second' => 'div',
+      'third' => 'div',
+      'fourth' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|phd_candidate|phd_job_market_candidate'] = $ds_layout;
+
   return $export;
 }
 
