@@ -75,10 +75,10 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
 function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
 
-  $research_interest_required_message = t('Research Interest field is required.');
+  $research_interest_required_message = t('Research Interests field is required.');
   $research_interest_error_key = 'field_phd_research_interests][und][0][value';
 
-  $faculty_advisor_required_message = t('Faculty Advisor field is required.');
+  $faculty_advisor_required_message = t('Faculty Advisors field is required.');
   $faculty_advisor_error_key = 'field_person_fac_ref][und][0][target_id';  
 
   $errors = form_get_errors();
