@@ -234,4 +234,3 @@ function gsb_feature_phd_candidate_ct_menu_local_tasks_alter(&$data, $router_ite
   }  
 }  
 
->>>>>>> WP-2107 Make some changes for the phd edit node form, related to the authenticated user
