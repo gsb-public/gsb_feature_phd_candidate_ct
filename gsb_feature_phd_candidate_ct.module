@@ -14,7 +14,28 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
   if ($form_id == 'phd_candidate_node_form') {
 
     // add a validation function
-    $form['#validate'][] = "gsb_feature_phd_candidate_ct_validate";
+    $form['#validate'][] = "gsb_feature_phd_candidate_ct_validate";    
+
+    // If the user doesn't have 'edit any' access for the phd candidate content
+    // then this is just an authenticated user, and only access to edit their own
+    // phd candidate profile.
+    // If true, we will modify several function of the node edit form
+    if (!user_access('edit any phd_candidate content')) {
+      // remove these fields
+      $form['revision_information']['#access'] = false;
+      $form['field_job_display']['#access'] = false;
+      $form['field_year']['#access'] = false;
+      $form['field_academic_institution']['#access'] = false;
+      // add a cancel button for the form
+      $form['actions']['cancel'] = array(
+        '#type' => 'submit',
+        '#value' => t('Cancel'),
+        '#submit' => array('gsb_feature_phd_candidate_ct_cancel_submit'),
+      );
+    }
+
+    $form['actions']['preview_changes']['#access'] = false;
+
     $language = $form['language']['#value'];
 
     foreach ($form['field_working_papers'][$language] as $key => &$value) {
@@ -109,6 +130,13 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
 function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
 
+  // always force the content to be published
+  // if the user is someone that doesn't have the 'edit any' permission
+  // this should be any phd student, who would only have the 'edit own' permission
+  if (!user_access('edit any phd_candidate content')) {
+    $form_state['values']['workbench_moderation_state_new'] = 'published';
+  }   
+
   $research_interest_required_message = t('Research Interest field is required.');
   $research_interest_error_key = 'field_phd_research_interests][und][0][value';
 
@@ -173,5 +201,37 @@ function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
 
   }
 
+}  
 
-} 
+/**
+ * Redirect the submitted form, if the user has click on the cancel button.
+ */
+function gsb_feature_phd_candidate_ct_cancel_submit($form, &$form_state) {
+  $form_state['redirect'] = $form_state['node']->path['alias'];
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function gsb_feature_phd_candidate_ct_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  $node = menu_get_object();
+  if ($node->type == 'phd_candidate') {
+    if (!user_access('edit any phd_candidate content')) {
+      // The user is an authenticated user with access to edit their own 
+      // phd candidate profile content.
+      // Remove the 'View published' tab, and change the wording for the
+      // 'New draft' tab.
+      foreach($data['tabs'][0]['output'] as $key => $value) {
+        $title = $data['tabs'][0]['output'][$key]['#link']['title'];
+        if ($title == 'View published') {
+          unset($data['tabs'][0]['output'][$key]);
+        } 
+        if ($title == 'New draft') {
+          $data['tabs'][0]['output'][$key]['#link']['title'] = 'Edit your Profile';
+        }         
+      } 
+    }  
+  }  
+}  
+
+>>>>>>> WP-2107 Make some changes for the phd edit node form, related to the authenticated user
