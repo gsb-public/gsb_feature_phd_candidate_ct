@@ -13,6 +13,29 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
 
   if ($form_id == 'phd_candidate_node_form') {
 
+    // add a validation function
+    $form['#validate'][] = "gsb_feature_phd_candidate_ct_validate";    
+
+    // If the user doesn't have 'edit any' access for the phd candidate content
+    // then this is just an authenticated user, and only access to edit their own
+    // phd candidate profile.
+    // If true, we will modify several function of the node edit form
+    if (!user_access('edit any phd_candidate content')) {
+      // remove these fields
+      $form['revision_information']['#access'] = false;
+      $form['field_job_display']['#access'] = false;
+      $form['field_year']['#access'] = false;
+      $form['field_academic_institution']['#access'] = false;
+      // add a cancel button for the form
+      $form['actions']['cancel'] = array(
+        '#type' => 'submit',
+        '#value' => t('Cancel'),
+        '#submit' => array('gsb_feature_phd_candidate_ct_cancel_submit'),
+      );
+    }
+
+    $form['actions']['preview_changes']['#access'] = false;
+
     $language = $form['language']['#value'];
 
     foreach ($form['field_working_papers'][$language] as $key => &$value) {
@@ -69,4 +92,110 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
   }  
 
 }
+
+function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
+
+  // always force the content to be published
+  // if the user is someone that doesn't have the 'edit any' permission
+  // this should be any phd student, who would only have the 'edit own' permission
+  if (!user_access('edit any phd_candidate content')) {
+    $form_state['values']['workbench_moderation_state_new'] = 'published';
+  }   
+
+  $research_interest_required_message = t('Research Interest field is required.');
+  $research_interest_error_key = 'field_phd_research_interests][und][0][value';
+
+  $faculty_advisor_required_message = t('Faculty Advisor field is required.');
+  $faculty_advisor_error_key = 'field_person_fac_ref][und][0][target_id';  
+
+  $errors = form_get_errors();
+
+  if ($errors) {
+
+    // Clear errors.
+    form_clear_error();
+
+    // Clear error messages.
+    $error_messages = drupal_get_messages('error');
+
+    // Initialize an array where removed error messages are stored.
+    $removed_messages = array();  
+
+    // Check if there is an error for the research interest field
+    $research_interest_error = false;
+
+    // Check if there is an error for the faculty advisor field
+    $faculty_advisor_error = false;    
+
+    foreach ($errors as $name => $error_message) {
+      if ($name == $research_interest_error_key) {
+        $removed_messages[] = $error_message;
+        unset($errors[$name]);
+        $research_interest_error = true;
+      }
+      if ($name == $faculty_advisor_error_key) {
+        $removed_messages[] = $error_message;
+        unset($errors[$name]);
+        $faculty_advisor_error = true;
+      }
+    }
+
+    // Reinstate remaining errors.
+    foreach ($errors as $name => $error) {
+      form_set_error($name, $error);
+      // form_set_error() calls drupal_set_message(), so we have to filter out
+      // these from the error messages as well.
+      $removed_messages[] = $error;
+    }
+
+    if ($faculty_advisor_error) {
+      // Now add it back with the new text we want
+      form_set_error($faculty_advisor_error_key, $faculty_advisor_required_message);
+    }  
+
+    if ($research_interest_error) {
+      // Now add it back with the new text we want
+      form_set_error($research_interest_error_key, $research_interest_required_message);
+    }
+
+    // Reinstate remaining error messages (which, at this point, are messages that
+    // were originated outside of the validation process).
+    foreach (array_diff($error_messages['error'], $removed_messages) as $message) {
+      drupal_set_message($message, 'error');
+    }
+
+  }
+
+}  
+
+/**
+ * Redirect the submitted form, if the user has click on the cancel button.
+ */
+function gsb_feature_phd_candidate_ct_cancel_submit($form, &$form_state) {
+  $form_state['redirect'] = $form_state['node']->path['alias'];
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function gsb_feature_phd_candidate_ct_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  $node = menu_get_object();
+  if ($node->type == 'phd_candidate') {
+    if (!user_access('edit any phd_candidate content')) {
+      // The user is an authenticated user with access to edit their own 
+      // phd candidate profile content.
+      // Remove the 'View published' tab, and change the wording for the
+      // 'New draft' tab.
+      foreach($data['tabs'][0]['output'] as $key => $value) {
+        $title = $data['tabs'][0]['output'][$key]['#link']['title'];
+        if ($title == 'View published') {
+          unset($data['tabs'][0]['output'][$key]);
+        } 
+        if ($title == 'New draft') {
+          $data['tabs'][0]['output'][$key]['#link']['title'] = 'Edit your Profile';
+        }         
+      } 
+    }  
+  }  
+}  
 
