@@ -555,21 +555,19 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'first' => array(
-        0 => 'field_link_single',
-        1 => 'field_image_single_public',
+        0 => 'field_image_single_public',
       ),
       'second' => array(
-        2 => 'field_person_fac_ref',
+        1 => 'field_person_fac_ref',
       ),
       'third' => array(
-        3 => 'field_dissertation',
+        2 => 'field_dissertation',
       ),
       'fourth' => array(
-        4 => 'field_phd_research_interests',
+        3 => 'field_phd_research_interests',
       ),
     ),
     'fields' => array(
-      'field_link_single' => 'first',
       'field_image_single_public' => 'first',
       'field_person_fac_ref' => 'second',
       'field_dissertation' => 'third',

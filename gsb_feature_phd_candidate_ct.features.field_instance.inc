@@ -1055,11 +1055,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
-        'module' => 'gsb_field_formatter',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'gsb_field_formatter_node_title_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
