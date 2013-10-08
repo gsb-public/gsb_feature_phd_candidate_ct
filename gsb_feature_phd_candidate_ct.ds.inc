@@ -322,6 +322,52 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
   );
   $export['node|phd_candidate|default'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|phd_candidate|phd_job_market_candidate';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'phd_candidate';
+  $ds_fieldsetting->view_mode = 'phd_job_market_candidate';
+  $ds_fieldsetting->settings = array(
+    'field_dissertation' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_person_fac_ref' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_phd_research_interests' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|phd_candidate|phd_job_market_candidate'] = $ds_fieldsetting;
+
   return $export;
 }
 
