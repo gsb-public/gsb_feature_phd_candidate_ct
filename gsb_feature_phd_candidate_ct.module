@@ -50,63 +50,28 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
         continue;
       }
       unset($form['field_work_in_progress'][$language][$key]['field_link_single'][$language][0]['#title']);
-    } 
+    }   
 
     foreach ($form['field_publications'][$language] as $key => &$value) {
       if (!is_int($key)) {
         continue;
       }
       unset($form['field_publications'][$language][$key]['field_link_single'][$language][0]['#title']);
-    } 
+    }  
 
     foreach ($form['field_link_single'][$language] as $key => &$value) {
       if (!is_int($key)) {
         continue;
       }
       unset($form['field_link_single'][$language][$key]['#title']);
-    } 
+    }     
 
     foreach ($form['field_working_papers'][$language] as $key => &$value) {
       if (!is_int($key)) {
         continue;
       }
-      unset($form['field_working_papers'][$language][$key]['field_title']); 
-    } 
-
-    foreach ($form['field_working_papers'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_working_papers'][$language][$key]['field_link_single'][$language][0]['#title']);
-    }
-
-    foreach ($form['field_work_in_progress'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_work_in_progress'][$language][$key]['field_link_single'][$language][0]['#title']);
-    } 
-
-    foreach ($form['field_publications'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_publications'][$language][$key]['field_link_single'][$language][0]['#title']);
-    }
-
-    foreach ($form['field_link_single'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_link_single'][$language][$key]['#title']);
-    }
-
-    foreach ($form['field_working_papers'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_working_papers'][$language][$key]['field_title']);
-    }
+      unset($form['field_working_papers'][$language][$key]['field_title']);  
+    }         
 
     $form['field_academic_institution'][$language][0]['value']['#states'] = array(
       'visible' => array(
@@ -114,7 +79,7 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
           array('value' => 'placement_page'),
         ),
       ),
-    );
+    );  
 
     $form['field_year']['#states'] = array(
       'visible' => array(
@@ -122,13 +87,16 @@ function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id)
           array('value' => 'placement_page'),
         ),
       ),
-    );
+    );    
 
-  }
+  }  
 
 }
 
 function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
+
+  // validate the author name
+  _gsb_feature_phd_candidate_ct_author_validate($form, $form_state);
 
   // always force the content to be published
   // if the user is someone that doesn't have the 'edit any' permission
@@ -151,16 +119,16 @@ function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
     form_clear_error();
 
     // Clear error messages.
-    $error_messages = drupal_get_messages('error');
+    $error_messages = drupal_get_messages('error');  
 
     // Initialize an array where removed error messages are stored.
-    $removed_messages = array();
+    $removed_messages = array();  
 
     // Check if there is an error for the research interest field
     $research_interest_error = false;
 
     // Check if there is an error for the faculty advisor field
-    $faculty_advisor_error = false; 
+    $faculty_advisor_error = false;    
 
     foreach ($errors as $name => $error_message) {
       if ($name == $research_interest_error_key) {
@@ -186,7 +154,7 @@ function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
     if ($faculty_advisor_error) {
       // Now add it back with the new text we want
       form_set_error($faculty_advisor_error_key, $faculty_advisor_required_message);
-    }
+    }  
 
     if ($research_interest_error) {
       // Now add it back with the new text we want
@@ -202,6 +170,69 @@ function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
   }
 
 }  
+
+function _gsb_feature_phd_candidate_ct_author_validate($form, &$form_state) {
+
+  // check if user set as the author exists
+  // if not, then we will create the user
+
+  $author_name = $form_state['values']['name'];
+  $author_user = user_load_by_name($author_name);
+  if (!$author_user) {
+    // generate a random password
+    $password = user_password();
+    //set up the user fields
+    $fields = array(
+      'name' => $author_name,
+      'mail' => $author_name . '@stanford.edu',
+      'pass' => $password,
+      'status' => 1,
+      'init' => 'email address',
+      'roles' => array(
+        DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+      ),
+    );
+    //the first parameter is left blank so a new user is created
+    $account = user_save('', $fields);    
+  } 
+
+  $errors = form_get_errors();
+  $clear_name_error = false;
+  if (isset($errors['name'])) {
+    $clear_name_error = true;
+    unset($errors['name']);
+  }
+  
+  if ($clear_name_error) {
+    
+    // Clear errors.
+    form_clear_error();
+
+    // Clear error messages.
+    $error_messages = drupal_get_messages('error');  
+    $index = 0; 
+    foreach($error_messages['error'] as $error) {
+      $pos = strpos($error, 'The username');
+      if ($pos !== false) {
+        unset($error_messages['error'][$index]);
+        break;
+      }
+      $index++;
+    }    
+    
+    // Reinstate remaining errors.
+    foreach ($errors as $name => $error) {
+      form_set_error($name, $error);
+    }
+    
+    // Reinstate error messages 
+    foreach ($error_messages['error'] as $message) {
+      drupal_set_message($message, 'error');
+    }
+         
+  }   
+
+}
 
 /**
  * Redirect the submitted form, if the user has click on the cancel button.
