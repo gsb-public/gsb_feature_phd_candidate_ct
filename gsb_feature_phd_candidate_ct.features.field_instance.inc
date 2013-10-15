@@ -1528,7 +1528,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'You are only required to include one research interest, but you may include up to four.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1691,7 +1691,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please provide either a Research statement or a Teaching Statement, but not both.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2023,7 +2023,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please provide either a Research statement or a Teaching Statement, but not both.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2353,6 +2353,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Paper');
   t('Personal Website');
   t('Photo');
+  t('Please provide either a Research statement or a Teaching Statement, but not both.');
   t('Publications');
   t('Recommended size: 271x271');
   t('Research Interests');
@@ -2366,6 +2367,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Title');
   t('Work in Progress');
   t('Working Papers');
+  t('You are only required to include one research interest, but you may include up to four.');
   t('e.g. Jr., Sr., III, PhD, BA, etc.');
   t('e.g. www.personalwebsite.com');
 
