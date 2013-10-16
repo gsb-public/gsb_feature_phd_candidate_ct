@@ -1691,7 +1691,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please provide either a Research statement or a Teaching Statement, but not both.',
+    'description' => 'Please provide either a research statement or a teaching statement, but not both.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2023,7 +2023,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please provide either a Research statement or a Teaching Statement, but not both.',
+    'description' => 'Please provide either a research statement or a teaching statement, but not both.',
     'display' => array(
       'default' => array(
         'label' => 'above',
