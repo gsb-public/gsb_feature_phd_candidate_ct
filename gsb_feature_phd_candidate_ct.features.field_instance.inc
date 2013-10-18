@@ -220,7 +220,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 750,
+        'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'maxlength_js_truncate_html' => 0,
@@ -869,7 +869,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 500,
+        'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'maxlength_js_truncate_html' => 0,
@@ -1229,7 +1229,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       ),
       'rel_remove' => 'default',
       'title' => 'required',
-      'title_maxlength' => 125,
+      'title_maxlength' => 150,
       'title_value' => '',
       'url' => 'optional',
       'user_register_form' => FALSE,
@@ -1754,7 +1754,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 500,
+        'maxlength_js' => 1000,
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'maxlength_js_truncate_html' => 0,
@@ -2086,7 +2086,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 500,
+        'maxlength_js' => 1000,
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'maxlength_js_truncate_html' => 0,
@@ -2353,7 +2353,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Paper');
   t('Personal Website');
   t('Photo');
-  t('Please provide either a Research statement or a Teaching Statement, but not both.');
+  t('Please provide either a research statement or a teaching statement, but not both.');
   t('Publications');
   t('Recommended size: 271x271');
   t('Research Interests');
