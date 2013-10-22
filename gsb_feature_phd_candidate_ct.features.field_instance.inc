@@ -1160,7 +1160,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Open in a new window when linking externally or to a PDF file.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2348,7 +2348,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Last Name');
   t('LinkedIn');
   t('Middle Name');
-  t('Open in a new window when linking externally or to a PDF file.');
   t('PDF only');
   t('Paper');
   t('Personal Website');
