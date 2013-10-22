@@ -1229,7 +1229,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       ),
       'rel_remove' => 'default',
       'title' => 'required',
-      'title_maxlength' => 150,
+      'title_maxlength' => 255,
       'title_value' => '',
       'url' => 'optional',
       'user_register_form' => FALSE,
