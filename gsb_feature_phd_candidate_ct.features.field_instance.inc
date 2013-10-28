@@ -402,7 +402,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'gsb_field_formatter',
         'settings' => array(
           'conditions' => array(),
           'custom_link_to_entity' => '',
@@ -417,7 +417,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'custom_ucfirst' => '',
           'text' => 'PDF',
         ),
-        'type' => 'file_download_link',
+        'type' => 'gsb_field_formatter_download_link',
         'weight' => 11,
       ),
       'featured' => array(
@@ -478,7 +478,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'gsb_field_formatter',
         'settings' => array(
           'conditions' => array(),
           'custom_link_to_entity' => '',
@@ -493,7 +493,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'custom_ucfirst' => '',
           'text' => 'CV',
         ),
-        'type' => 'file_download_link',
+        'type' => 'gsb_field_formatter_download_link',
         'weight' => 3,
       ),
       'featured' => array(
