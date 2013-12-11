@@ -1826,7 +1826,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_salutation',
-    'label' => 'Salutation',
+    'label' => 'Prefix',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -2353,11 +2353,11 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Personal Website');
   t('Photo');
   t('Please provide either a research statement or a teaching statement, but not both.');
+  t('Prefix');
   t('Publications');
   t('Recommended size: 271x271');
   t('Research Interests');
   t('Research Statement');
-  t('Salutation');
   t('Search field');
   t('Select your primary academic area');
   t('Suffix');
