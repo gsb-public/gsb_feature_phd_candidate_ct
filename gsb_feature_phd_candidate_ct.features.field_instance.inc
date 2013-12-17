@@ -452,7 +452,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => '',
+      'file_directory' => 'phd-candidate-job-market-paper',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
@@ -534,7 +534,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => 'cv',
+      'file_directory' => 'phd-candidate-cv',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
@@ -717,7 +717,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => 'person-photos',
+      'file_directory' => 'phd-candidate-person-photos',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
