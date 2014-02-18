@@ -385,7 +385,7 @@ function gsb_feature_phd_candidate_ct_ds_custom_fields_info() {
   $ds_field->entities = array(
     'node' => 'node',
   );
-  $ds_field->ui_limit = '';
+  $ds_field->ui_limit = 'phd_candidate|default';
   $ds_field->properties = array(
     'code' => array(
       'value' => '<div>PhD Program Office</div>
