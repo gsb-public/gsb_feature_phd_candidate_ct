@@ -379,6 +379,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Email',
     'required' => 0,
     'settings' => array(
+      'allow_without_formatter' => FALSE,
+      'form_title' => 'Contact person by email',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -415,6 +417,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'custom_suffix' => '',
           'custom_trim' => '',
           'custom_ucfirst' => '',
+          'file_view_mode' => 'default',
           'text' => 'PDF',
         ),
         'type' => 'gsb_field_formatter_download_link',
@@ -491,6 +494,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'custom_suffix' => '',
           'custom_trim' => '',
           'custom_ucfirst' => '',
+          'file_view_mode' => 'default',
           'text' => 'CV',
         ),
         'type' => 'gsb_field_formatter_download_link',
@@ -796,7 +800,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -1935,7 +1939,65 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'concat_field_default',
-      'weight' => 11,
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-phd_candidate-field_submit'
+  $field_instances['node-phd_candidate-field_submit'] = array(
+    'bundle' => 'phd_candidate',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => NULL,
+        'settings' => array(),
+        'type' => 'submit_field_default',
+        'weight' => 28,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_submit',
+    'label' => 'Submit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'submit_field',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'submit_field',
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
@@ -2360,6 +2422,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Research Statement');
   t('Search field');
   t('Select your primary academic area');
+  t('Submit');
   t('Suffix');
   t('Summary');
   t('Teaching Statement');

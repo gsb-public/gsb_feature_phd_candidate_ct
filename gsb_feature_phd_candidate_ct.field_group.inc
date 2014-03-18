@@ -21,7 +21,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Academic Information',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_academic_area_single',
       1 => 'field_description',
@@ -55,7 +55,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Personal Information',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_email',
       1 => 'field_file_single_public',
@@ -122,7 +122,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Papers & Publications ',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'group_job_market_paper',
       1 => 'group_publications',
