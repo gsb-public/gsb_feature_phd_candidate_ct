@@ -9,229 +9,74 @@ include_once 'gsb_feature_phd_candidate_ct.features.inc';
 /**
  * Implements hook_form_alter().
  */
-function gsb_feature_phd_candidate_ct_form_alter(&$form, &$form_state, $form_id) {
+function gsb_feature_phd_candidate_ct_form_phd_candidate_node_form_alter(&$form, &$form_state, $form_id) {
+  // add a validation function
+  $form['#validate'][] = 'gsb_feature_phd_candidate_ct_validate';
+  dpm($form['field_person_fac_ref']['und']);
 
-  if ($form_id == 'phd_candidate_node_form') {
+  // If the user doesn't have 'edit any' access for the phd candidate content
+  // then this is just an authenticated user, and only access to edit their own
+  // phd candidate profile.
+  // If true, we will modify several function of the node edit form
+  if (!user_access('edit any phd_candidate content')) {
+    // remove these fields
+    $form['revision_information']['#access'] = false;
+    $form['field_job_display']['#access'] = false;
+    $form['field_year']['#access'] = false;
+    $form['field_academic_institution']['#access'] = false;
+    // add a cancel button for the form
+    $form['actions']['cancel'] = array(
+      '#type' => 'submit',
+      '#value' => t('Cancel'),
+      '#submit' => array('gsb_feature_phd_candidate_ct_cancel_submit'),
+    );
+  }
 
-    // add a validation function
-    $form['#validate'][] = "gsb_feature_phd_candidate_ct_validate";    
+  $form['actions']['preview_changes']['#access'] = false;
 
-    // If the user doesn't have 'edit any' access for the phd candidate content
-    // then this is just an authenticated user, and only access to edit their own
-    // phd candidate profile.
-    // If true, we will modify several function of the node edit form
-    if (!user_access('edit any phd_candidate content')) {
-      // remove these fields
-      $form['revision_information']['#access'] = false;
-      $form['field_job_display']['#access'] = false;
-      $form['field_year']['#access'] = false;
-      $form['field_academic_institution']['#access'] = false;
-      // add a cancel button for the form
-      $form['actions']['cancel'] = array(
-        '#type' => 'submit',
-        '#value' => t('Cancel'),
-        '#submit' => array('gsb_feature_phd_candidate_ct_cancel_submit'),
-      );
-    }
-
-    $form['actions']['preview_changes']['#access'] = false;
-
-    $language = $form['language']['#value'];
-
-    foreach ($form['field_working_papers'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_working_papers'][$language][$key]['field_link_single'][$language][0]['#title']);
-    }
-
-    foreach ($form['field_work_in_progress'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_work_in_progress'][$language][$key]['field_link_single'][$language][0]['#title']);
-    }   
-
-    foreach ($form['field_publications'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_publications'][$language][$key]['field_link_single'][$language][0]['#title']);
-    }  
-
-    foreach ($form['field_link_single'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_link_single'][$language][$key]['#title']);
-    }     
-
-    foreach ($form['field_working_papers'][$language] as $key => &$value) {
-      if (!is_int($key)) {
-        continue;
-      }
-      unset($form['field_working_papers'][$language][$key]['field_title']);  
-    }         
-
-    $form['field_academic_institution'][$language][0]['value']['#states'] = array(
-      'visible' => array(
-        ':input[name="field_job_display[' . $language . ']"]' => array(
-          array('value' => 'placement_page'),
-        ),
+  $language = $form['language']['#value'];
+  $form['field_academic_institution']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_job_display[' . $language . ']"]' => array(
+        array('value' => 'placement_page'),
       ),
-    );  
+    ),
+  );
 
-    $form['field_year']['#states'] = array(
-      'visible' => array(
-        ':input[name="field_job_display[' . $language . ']"]' => array(
-          array('value' => 'placement_page'),
-        ),
+  $form['field_year']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_job_display[' . $language . ']"]' => array(
+        array('value' => 'placement_page'),
       ),
-    );    
-
-  }  
-
+    ),
+  );
 }
 
 function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {
-
-  // validate the author name
-  _gsb_feature_phd_candidate_ct_author_validate($form, $form_state);
-
   // always force the content to be published
   // if the user is someone that doesn't have the 'edit any' permission
   // this should be any phd student, who would only have the 'edit own' permission
   if (!user_access('edit any phd_candidate content')) {
     $form_state['values']['workbench_moderation_state_new'] = 'published';
-  }   
-
-  $research_interest_required_message = t('Research Interests field is required.');
-  $research_interest_error_key = 'field_phd_research_interests][und][0][value';
-
-  $faculty_advisor_required_message = t('Faculty Advisors field is required.');
-  $faculty_advisor_error_key = 'field_person_fac_ref][und][0][target_id';  
-
-  $errors = form_get_errors();
-
-  if ($errors) {
-
-    // Clear errors.
-    form_clear_error();
-
-    // Clear error messages.
-    $error_messages = drupal_get_messages('error');  
-
-    // Initialize an array where removed error messages are stored.
-    $removed_messages = array();  
-
-    // Check if there is an error for the research interest field
-    $research_interest_error = false;
-
-    // Check if there is an error for the faculty advisor field
-    $faculty_advisor_error = false;    
-
-    foreach ($errors as $name => $error_message) {
-      if ($name == $research_interest_error_key) {
-        $removed_messages[] = $error_message;
-        unset($errors[$name]);
-        $research_interest_error = true;
-      }
-      if ($name == $faculty_advisor_error_key) {
-        $removed_messages[] = $error_message;
-        unset($errors[$name]);
-        $faculty_advisor_error = true;
-      }
-    }
-
-    // Reinstate remaining errors.
-    foreach ($errors as $name => $error) {
-      form_set_error($name, $error);
-      // form_set_error() calls drupal_set_message(), so we have to filter out
-      // these from the error messages as well.
-      $removed_messages[] = $error;
-    }
-
-    if ($faculty_advisor_error) {
-      // Now add it back with the new text we want
-      form_set_error($faculty_advisor_error_key, $faculty_advisor_required_message);
-    }  
-
-    if ($research_interest_error) {
-      // Now add it back with the new text we want
-      form_set_error($research_interest_error_key, $research_interest_required_message);
-    }
-
-    // Reinstate remaining error messages (which, at this point, are messages that
-    // were originated outside of the validation process).
-    foreach (array_diff($error_messages['error'], $removed_messages) as $message) {
-      drupal_set_message($message, 'error');
-    }
-
   }
-
-}  
-
-function _gsb_feature_phd_candidate_ct_author_validate($form, &$form_state) {
 
   // check if user set as the author exists
   // if not, then we will create the user
-
   $author_name = $form_state['values']['name'];
-  $author_user = user_load_by_name($author_name);
-  if (!$author_user) {
-    // generate a random password
-    $password = user_password();
+  if (!$author_user = user_load_by_name($author_name)) {
     //set up the user fields
     $fields = array(
       'name' => $author_name,
       'mail' => $author_name . '@stanford.edu',
-      'pass' => $password,
+      'pass' => user_password(),
       'status' => 1,
-      'init' => 'email address',
+      'init' => 'gsb_feature_phd_candidate_ct',
       'roles' => array(
         DRUPAL_AUTHENTICATED_RID => 'authenticated user',
       ),
     );
-    //the first parameter is left blank so a new user is created
-    $account = user_save('', $fields);    
+    user_save(drupal_anonymous_user(), $fields);
   } 
-
-  $errors = form_get_errors();
-  $clear_name_error = false;
-  if (isset($errors['name'])) {
-    $clear_name_error = true;
-    unset($errors['name']);
-  }
-  
-  if ($clear_name_error) {
-    
-    // Clear errors.
-    form_clear_error();
-
-    // Clear error messages.
-    $error_messages = drupal_get_messages('error');  
-    $index = 0; 
-    foreach($error_messages['error'] as $error) {
-      $pos = strpos($error, 'The username');
-      if ($pos !== false) {
-        unset($error_messages['error'][$index]);
-        break;
-      }
-      $index++;
-    }    
-    
-    // Reinstate remaining errors.
-    foreach ($errors as $name => $error) {
-      form_set_error($name, $error);
-    }
-    
-    // Reinstate error messages 
-    foreach ($error_messages['error'] as $message) {
-      drupal_set_message($message, 'error');
-    }
-         
-  }   
-
 }
 
 /**
