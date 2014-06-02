@@ -12,7 +12,6 @@ include_once 'gsb_feature_phd_candidate_ct.features.inc';
 function gsb_feature_phd_candidate_ct_form_phd_candidate_node_form_alter(&$form, &$form_state, $form_id) {
   // add a validation function
   $form['#validate'][] = 'gsb_feature_phd_candidate_ct_validate';
-  dpm($form['field_person_fac_ref']['und']);
 
   // If the user doesn't have 'edit any' access for the phd candidate content
   // then this is just an authenticated user, and only access to edit their own
