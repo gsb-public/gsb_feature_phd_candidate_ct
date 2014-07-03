@@ -73,6 +73,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Academic Area',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -131,6 +133,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Academic Institution',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -147,7 +151,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 80,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -209,6 +213,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Summary',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -295,6 +301,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Dissertation Title',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -380,6 +388,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'allow_without_formatter' => FALSE,
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'form_title' => 'Contact person by email',
       'user_register_form' => FALSE,
     ),
@@ -391,6 +401,76 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-phd_candidate-field_faculty_advisors'
+  $field_instances['node-phd_candidate-field_faculty_advisors'] = array(
+    'bundle' => 'phd_candidate',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'conditions' => array(),
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 29,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'phd_job_market_candidate' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_faculty_advisors',
+    'label' => 'Faculty Advisors',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'field_collection_embed',
       'weight' => 6,
     ),
     'workbench_access_field' => 0,
@@ -454,6 +534,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Paper',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'description_field' => 0,
       'file_directory' => '',
       'file_extensions' => 'pdf',
@@ -537,6 +619,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'CV',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'description_field' => 0,
       'file_directory' => 'cv',
       'file_extensions' => 'pdf',
@@ -619,6 +703,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'First Name',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -720,6 +806,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'alt_field' => 0,
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'default_image' => 0,
       'file_directory' => 'person-photos',
       'file_extensions' => 'png gif jpg jpeg',
@@ -791,6 +879,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Display Settings (for Administrative use only)',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -862,6 +952,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -948,6 +1040,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Last Name',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1039,6 +1133,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1132,6 +1228,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1225,6 +1323,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1318,6 +1418,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1410,6 +1512,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Middle Name',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1427,106 +1531,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-phd_candidate-field_person_fac_ref'
-  $field_instances['node-phd_candidate-field_person_fac_ref'] = array(
-    'bundle' => 'phd_candidate',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Begin typing to look up your faculty advisor(s).',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 5,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'phd_job_market_candidate' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'custom_link_to_entity' => 0,
-          'custom_prefix' => '',
-          'custom_reverse' => 0,
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => 0,
-          'custom_strtolower' => 0,
-          'custom_strtoupper' => 0,
-          'custom_suffix' => '',
-          'custom_trim' => 0,
-          'custom_ucfirst' => 0,
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tiny' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_person_fac_ref',
-    'label' => 'Faculty Advisors',
-    'required' => 1,
-    'settings' => array(
-      'behaviors' => array(
-        'taxonomy-index' => array(
-          'status' => TRUE,
-        ),
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -1601,6 +1605,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Research Interests',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1617,7 +1623,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -1680,6 +1686,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Publications',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1751,6 +1759,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Research Statement',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1837,6 +1847,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Prefix',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1907,6 +1919,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Search field',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'selected_fields' => array(
         'concat_field_entity_label' => 'concat_field_entity_label',
         'field_academic_area_single' => 'field_academic_area_single',
@@ -1943,7 +1957,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'concat_field_default',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -1992,6 +2006,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Submit',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2063,6 +2079,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Suffix',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -2141,6 +2159,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Teaching Statement',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -2228,6 +2248,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Work in Progress',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2306,6 +2328,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Working Papers',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2315,7 +2339,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 20,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -2369,6 +2393,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Graduation Year',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'default_value' => 'now',
       'default_value2' => 'same',
       'default_value_code' => '',
@@ -2400,7 +2426,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('(Google Scholar public profile URL) e.g. <a href="http://scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en" target="_blank">scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en</a>');
   t('Academic Area');
   t('Academic Institution');
-  t('Begin typing to look up your faculty advisor(s).');
   t('CV');
   t('Description');
   t('Display Settings (for Administrative use only)');
