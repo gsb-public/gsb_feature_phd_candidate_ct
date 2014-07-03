@@ -52,6 +52,14 @@ function gsb_feature_phd_candidate_ct_form_phd_candidate_node_form_alter(&$form,
     ),
   );
 
+  if (!empty($form['field_faculty_advisors'][$language])) {
+    foreach ($form['field_faculty_advisors'][$language] as $index => $data) {
+      if (is_integer($index)) {
+        $form['field_faculty_advisors']['und'][$index]['field_person_fac_or_other']['und']['#options']['UseEntityReference'] = 'GSB faculty';
+        $form['field_faculty_advisors']['und'][$index]['field_person_fac_or_other']['und']['#options']['Other'] = 'Other (not GSB Faculty)';
+      }
+    }
+  }
 }
 
 /**
