@@ -10,6 +10,9 @@ include_once 'gsb_feature_phd_candidate_ct.features.inc';
  * Implements hook_form_alter().
  */
 function gsb_feature_phd_candidate_ct_form_phd_candidate_node_form_alter(&$form, &$form_state, $form_id) {
+
+  $language = $form['language']['#value'];
+
   // add a validation function
   $form['#validate'][] = 'gsb_feature_phd_candidate_ct_validate';
 
@@ -33,7 +36,6 @@ function gsb_feature_phd_candidate_ct_form_phd_candidate_node_form_alter(&$form,
 
   $form['actions']['preview_changes']['#access'] = false;
 
-  $language = $form['language']['#value'];
   $form['field_academic_institution']['#states'] = array(
     'visible' => array(
       ':input[name="field_job_display[' . $language . ']"]' => array(
@@ -49,6 +51,50 @@ function gsb_feature_phd_candidate_ct_form_phd_candidate_node_form_alter(&$form,
       ),
     ),
   );
+
+}
+
+/**
+ * Implements hook_field_attach_form().
+ */
+function gsb_feature_phd_candidate_ct_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+  // $langcode might be NULL.
+  $langcode = $langcode ?: LANGUAGE_NONE;
+  // If this is a field_faculty_advisors field collection, and the entity reference is set,
+  // setup the states for visibility
+  if ($entity_type == 'field_collection_item' && $entity->field_name == 'field_faculty_advisors') {
+    $map = array(
+      'UseEntityReference' => array(
+        'field_person_fac_single_ref',
+      ),
+      'Other' => array(
+        'field_faculty_advisor_other',
+      ),
+    );
+
+    // Build up the location of the field in the form.
+    $parents = $form['#parents'];
+    $parents[] = 'field_person_fac_or_other';
+    $parents[] = $langcode;
+    $first = array_shift($parents);
+    $parents = $first . '[' . implode('][', $parents) . ']';
+
+    // Loop through each possible value for the field_person_fac_or_other field,
+    // controlling the visibility of the dependent fields.
+    foreach ($map as $value => $fields) {
+      foreach ($fields as $field) {
+        $form[$field]['#states'] = array(
+          'visible' => array(
+            ':input[name="' . $parents . '"]' => array(
+              array('value' => $value),
+            ),
+          ),
+        );
+      }
+    }
+    // remove "n/a" as an option for the fac_or_other
+    unset($form['field_person_fac_or_other'][$langcode]['#options']['_none']);
+  }
 }
 
 function gsb_feature_phd_candidate_ct_validate($form, &$form_state) {

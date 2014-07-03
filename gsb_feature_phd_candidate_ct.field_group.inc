@@ -30,6 +30,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       4 => 'field_phd_research_interests',
       5 => 'field_research_statement',
       6 => 'field_teaching_statement',
+      7 => 'field_faculty_advisors',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -93,7 +94,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = 'group_papers_publications';
   $field_group->data = array(
     'label' => 'Job Market Paper',
-    'weight' => '22',
+    'weight' => '8',
     'children' => array(
       0 => 'field_file_job_market_paper',
       1 => 'field_job_market_paper_desc',
@@ -150,7 +151,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = 'group_papers_publications';
   $field_group->data = array(
     'label' => 'Publications',
-    'weight' => '24',
+    'weight' => '9',
     'children' => array(
       0 => 'field_publications',
     ),
@@ -177,7 +178,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = 'group_papers_publications';
   $field_group->data = array(
     'label' => 'Work in Progress',
-    'weight' => '26',
+    'weight' => '11',
     'children' => array(
       0 => 'field_work_in_progress',
     ),
@@ -204,7 +205,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = 'group_papers_publications';
   $field_group->data = array(
     'label' => 'Working Papers',
-    'weight' => '25',
+    'weight' => '10',
     'children' => array(
       0 => 'field_working_papers',
     ),
