@@ -91,6 +91,12 @@ function gsb_feature_phd_candidate_ct_strongarm() {
       'media_contact' => array(
         'custom_settings' => FALSE,
       ),
+      'views_content_pane' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

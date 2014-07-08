@@ -12,6 +12,30 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'field_collection_item|field_faculty_advisors|default';
+  $ds_fieldsetting->entity_type = 'field_collection_item';
+  $ds_fieldsetting->bundle = 'field_faculty_advisors';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_faculty_advisor_other' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_person_fac_single_ref' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['field_collection_item|field_faculty_advisors|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'field_collection_item|field_publications|default';
   $ds_fieldsetting->entity_type = 'field_collection_item';
   $ds_fieldsetting->bundle = 'field_publications';
@@ -337,14 +361,6 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_person_fac_ref' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
     'field_phd_research_interests' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -362,6 +378,20 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_faculty_advisors' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -407,6 +437,36 @@ function gsb_feature_phd_candidate_ct_ds_custom_fields_info() {
  */
 function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'field_collection_item|field_faculty_advisors|default';
+  $ds_layout->entity_type = 'field_collection_item';
+  $ds_layout->bundle = 'field_faculty_advisors';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_faculty_advisor_other',
+        1 => 'field_person_fac_single_ref',
+      ),
+    ),
+    'fields' => array(
+      'field_faculty_advisor_other' => 'ds_content',
+      'field_person_fac_single_ref' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['field_collection_item|field_faculty_advisors|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -604,7 +664,7 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
         0 => 'field_image_single_public',
       ),
       'second' => array(
-        1 => 'field_person_fac_ref',
+        1 => 'field_faculty_advisors',
       ),
       'third' => array(
         2 => 'field_dissertation',
@@ -615,7 +675,7 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_image_single_public' => 'first',
-      'field_person_fac_ref' => 'second',
+      'field_faculty_advisors' => 'second',
       'field_dissertation' => 'third',
       'field_phd_research_interests' => 'fourth',
     ),

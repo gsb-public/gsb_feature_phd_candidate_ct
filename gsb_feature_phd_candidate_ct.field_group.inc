@@ -265,7 +265,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Job Market Paper',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_file_job_market_paper',
       1 => 'field_job_market_paper_desc',
