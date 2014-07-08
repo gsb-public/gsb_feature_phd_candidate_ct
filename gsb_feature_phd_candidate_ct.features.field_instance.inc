@@ -423,7 +423,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'featured' => array(
         'label' => 'above',
