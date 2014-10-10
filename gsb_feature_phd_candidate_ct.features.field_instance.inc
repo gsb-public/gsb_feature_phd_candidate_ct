@@ -479,6 +479,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   // Exported field_instance: 'node-phd_candidate-field_file_job_market_paper'
   $field_instances['node-phd_candidate-field_file_job_market_paper'] = array(
     'bundle' => 'phd_candidate',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -537,8 +539,27 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'custom_add_another' => '',
       'custom_remove' => '',
       'description_field' => 0,
-      'file_directory' => '',
+      'file_directory' => 'phd-job-market-paper',
       'file_extensions' => 'pdf',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 0,
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -558,6 +579,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   // Exported field_instance: 'node-phd_candidate-field_file_single_public'
   $field_instances['node-phd_candidate-field_file_single_public'] = array(
     'bundle' => 'phd_candidate',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'deleted' => 0,
     'description' => 'PDF only',
     'display' => array(
@@ -624,6 +647,25 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => 'cv',
       'file_extensions' => 'pdf',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => 'phd-cv/[node:url:args:last]',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
