@@ -232,7 +232,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Information wrapper',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_email',
       1 => 'phd_address',
@@ -332,7 +332,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Name wrapper',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_first_name',
       1 => 'field_last_name',
