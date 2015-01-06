@@ -149,12 +149,10 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'phd_candidate';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'phd_address' => array(
-      'weight' => '4',
+    'phd_academic_area_label' => array(
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
-    ),
-    'field_academic_area_single' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
@@ -164,11 +162,25 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
           'ow-def-cl' => TRUE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
-          'fis' => TRUE,
-          'fis-el' => 'span',
-          'fis-cl' => '',
-          'fis-at' => '',
-          'fis-def-at' => FALSE,
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'phd_address' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_email' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -403,6 +415,24 @@ function gsb_feature_phd_candidate_ct_ds_custom_fields_info() {
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
+  $ds_field->field = 'phd_academic_area_label';
+  $ds_field->label = 'PhD Academic Area label';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'phd_candidate|default';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => 'PhD Program, [node:field_academic_area_single]',
+      'format' => 'gsb_html_text',
+    ),
+    'use_token' => 1,
+  );
+  $export['phd_academic_area_label'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
   $ds_field->field = 'phd_address';
   $ds_field->label = 'PhD address';
   $ds_field->field_type = 5;
@@ -571,64 +601,64 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'field_image_single_public',
-        1 => 'field_academic_area_single',
+        1 => 'phd_academic_area_label',
         2 => 'field_email',
         3 => 'group_wrapper_information',
+        4 => 'group_wrapper_link',
         5 => 'field_file_single_public',
-        6 => 'group_wrapper_link',
+        6 => 'field_link_google_scholar',
         8 => 'phd_address',
-        9 => 'field_link_google_scholar',
-        10 => 'field_link_linkedin',
-        12 => 'field_link_website',
+        9 => 'field_link_linkedin',
+        11 => 'field_link_website',
       ),
       'right' => array(
-        4 => 'group_wrapper_name',
-        7 => 'field_description',
-        11 => 'field_faculty_advisors',
-        13 => 'field_salutation',
-        14 => 'field_phd_research_interests',
-        15 => 'field_first_name',
-        16 => 'field_research_statement',
+        7 => 'group_wrapper_name',
+        10 => 'field_description',
+        12 => 'field_faculty_advisors',
+        13 => 'field_research_statement',
+        14 => 'field_salutation',
+        15 => 'field_phd_research_interests',
+        16 => 'field_first_name',
         17 => 'field_middle_name',
         18 => 'field_teaching_statement',
-        19 => 'field_link_single',
-        20 => 'group_wrapper_jobpaper',
-        21 => 'field_last_name',
-        22 => 'field_file_job_market_paper',
-        23 => 'field_publications',
-        24 => 'field_job_market_paper_desc',
-        25 => 'field_working_papers',
+        19 => 'field_last_name',
+        20 => 'field_link_single',
+        21 => 'group_wrapper_jobpaper',
+        22 => 'field_publications',
+        23 => 'field_file_job_market_paper',
+        24 => 'field_working_papers',
+        25 => 'field_job_market_paper_desc',
         26 => 'field_work_in_progress',
         27 => 'field_suffix_name',
       ),
     ),
     'fields' => array(
       'field_image_single_public' => 'left',
-      'field_academic_area_single' => 'left',
+      'phd_academic_area_label' => 'left',
       'field_email' => 'left',
       'group_wrapper_information' => 'left',
-      'group_wrapper_name' => 'right',
-      'field_file_single_public' => 'left',
       'group_wrapper_link' => 'left',
-      'field_description' => 'right',
-      'phd_address' => 'left',
+      'field_file_single_public' => 'left',
       'field_link_google_scholar' => 'left',
+      'group_wrapper_name' => 'right',
+      'phd_address' => 'left',
       'field_link_linkedin' => 'left',
-      'field_faculty_advisors' => 'right',
+      'field_description' => 'right',
       'field_link_website' => 'left',
+      'field_faculty_advisors' => 'right',
+      'field_research_statement' => 'right',
       'field_salutation' => 'right',
       'field_phd_research_interests' => 'right',
       'field_first_name' => 'right',
-      'field_research_statement' => 'right',
       'field_middle_name' => 'right',
       'field_teaching_statement' => 'right',
+      'field_last_name' => 'right',
       'field_link_single' => 'right',
       'group_wrapper_jobpaper' => 'right',
-      'field_last_name' => 'right',
-      'field_file_job_market_paper' => 'right',
       'field_publications' => 'right',
-      'field_job_market_paper_desc' => 'right',
+      'field_file_job_market_paper' => 'right',
       'field_working_papers' => 'right',
+      'field_job_market_paper_desc' => 'right',
       'field_work_in_progress' => 'right',
       'field_suffix_name' => 'right',
     ),
