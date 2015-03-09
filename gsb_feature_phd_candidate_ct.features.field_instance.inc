@@ -712,8 +712,10 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   // Exported field_instance: 'node-phd_candidate-field_image_single_public'
   $field_instances['node-phd_candidate-field_image_single_public'] = array(
     'bundle' => 'phd_candidate',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'deleted' => 0,
-    'description' => 'Recommended size: 271x271',
+    'description' => '540 x 540 px',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -784,6 +786,26 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'person-photos',
       'file_extensions' => 'png gif jpg jpeg',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '',
+        ),
+        'replace_existing_files' => 0,
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -794,7 +816,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -1069,6 +1090,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Google Scholar',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1154,6 +1176,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'LinkedIn',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1239,6 +1262,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Title',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1324,6 +1348,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'label' => 'Personal Website',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -2246,6 +2271,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('(Google Scholar public profile URL) e.g. <a href="http://scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en" target="_blank">scholar.google.com/citations?user=bEU1yv4AAAJ&hl=en</a>');
+  t('540 x 540 px');
   t('Academic Area');
   t('Academic Institution');
   t('CV');
@@ -2268,7 +2294,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Please provide either a research statement or a teaching statement, but not both.');
   t('Prefix');
   t('Publications');
-  t('Recommended size: 271x271');
   t('Research Interests');
   t('Research Statement');
   t('Search field');
