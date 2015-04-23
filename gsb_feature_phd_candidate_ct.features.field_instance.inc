@@ -1466,6 +1466,8 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   // Exported field_instance: 'node-phd_candidate-field_phd_research_interests'
   $field_instances['node-phd_candidate-field_phd_research_interests'] = array(
     'bundle' => 'phd_candidate',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'You are only required to include one research interest, but you may include up to four.',
@@ -1521,8 +1523,54 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_phd_research_interests',
     'label' => 'Research Interests',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'act' => 'act',
+          'full_html' => 'full_html',
+          'gsb_html_text' => 'gsb_html_text',
+          'gsb_wysiwyg_text' => 'gsb_wysiwyg_text',
+          'image_resource_caption' => 'image_resource_caption',
+          'markdown' => 'markdown',
+          'plain_text' => 'plain_text',
+          'sidebar' => 'sidebar',
+          'slideshow' => 'slideshow',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'act' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'gsb_html_text' => array(
+              'weight' => -9,
+            ),
+            'gsb_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'image_resource_caption' => array(
+              'weight' => 0,
+            ),
+            'markdown' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'sidebar' => array(
+              'weight' => 0,
+            ),
+            'slideshow' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
       'custom_add_another' => '',
       'custom_remove' => '',
       'linkit' => array(
