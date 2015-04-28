@@ -183,6 +183,19 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         'conditions' => array(),
       ),
     ),
+    'field_description' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_email' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -209,6 +222,19 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_file_single_public' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_first_name' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -217,6 +243,26 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
           'ow-el' => 'span',
           'ow-cl' => '',
           'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_image_single_public' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_job_market_paper_desc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
         ),
@@ -235,12 +281,51 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_link_google_scholar' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_link_linkedin' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_link_single' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'span',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_link_website' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
           'ow-cl' => '',
           'ow-def-cl' => TRUE,
           'ow-at' => '',
@@ -285,16 +370,28 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
     'field_publications' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
     'field_research_statement' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -327,24 +424,42 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
     'field_teaching_statement' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
     'field_work_in_progress' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
     'field_working_papers' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
