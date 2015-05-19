@@ -35,6 +35,15 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -100,6 +109,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -171,6 +186,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -239,6 +260,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'above',
@@ -333,6 +360,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -408,6 +441,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'above',
         'module' => 'field_collection',
@@ -477,6 +516,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -567,6 +612,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -661,6 +712,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -738,6 +795,17 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'module' => 'gsb_field_formatter',
+        'settings' => array(
+          'conditions' => array(),
+          'image_link' => 'content',
+          'image_style' => '170x170',
+        ),
+        'type' => 'gsb_field_formatter_image',
         'weight' => 0,
       ),
       'phd_job_market_candidate' => array(
@@ -854,6 +922,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -916,6 +990,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -988,6 +1068,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -1064,6 +1150,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -1157,6 +1249,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1242,6 +1340,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -1329,6 +1433,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1415,6 +1525,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1492,6 +1608,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'above',
@@ -1623,6 +1745,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1685,6 +1813,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -1758,6 +1892,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1829,6 +1969,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -1922,6 +2068,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1984,6 +2136,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'above',
@@ -2054,6 +2212,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
@@ -2128,6 +2292,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -2198,6 +2368,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -2262,6 +2438,12 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'people_fpp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
       ),
       'phd_job_market_candidate' => array(
         'label' => 'hidden',

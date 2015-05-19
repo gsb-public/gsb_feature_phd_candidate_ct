@@ -482,6 +482,62 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|phd_candidate|people_fpp';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'phd_candidate';
+  $ds_fieldsetting->view_mode = 'people_fpp';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => '',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'field_academic_area_single' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'span',
+          'ow-cl' => 'person-area',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_image_single_public' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|phd_candidate|people_fpp'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|phd_candidate|phd_job_market_candidate';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'phd_candidate';
@@ -803,6 +859,38 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
     'layout_disable_css' => 0,
   );
   $export['node|phd_candidate|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|phd_candidate|people_fpp';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'phd_candidate';
+  $ds_layout->view_mode = 'people_fpp';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_image_single_public',
+        1 => 'title',
+        2 => 'field_academic_area_single',
+      ),
+    ),
+    'fields' => array(
+      'field_image_single_public' => 'ds_content',
+      'title' => 'ds_content',
+      'field_academic_area_single' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|phd_candidate|people_fpp'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

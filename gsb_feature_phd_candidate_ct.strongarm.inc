@@ -71,7 +71,7 @@ function gsb_feature_phd_candidate_ct_strongarm() {
         'custom_settings' => FALSE,
       ),
       'people_fpp' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
