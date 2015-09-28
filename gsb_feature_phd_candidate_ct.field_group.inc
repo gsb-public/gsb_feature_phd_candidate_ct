@@ -242,7 +242,8 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'format_settings' => array(
       'label' => 'Information wrapper',
       'instance_settings' => array(
-        'classes' => '',
+        'id' => '',
+        'classes' => 'group-wrapper-information field-group-div',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -275,7 +276,8 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'format_settings' => array(
       'label' => 'Job Market Paper',
       'instance_settings' => array(
-        'classes' => '',
+        'id' => '',
+        'classes' => 'group-wrapper-jobpaper field-group-div',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
@@ -309,7 +311,8 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'format_settings' => array(
       'label' => 'Link wrapper',
       'instance_settings' => array(
-        'classes' => '',
+        'id' => '',
+        'classes' => 'group-wrapper-link field-group-div',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -344,7 +347,8 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
     'format_settings' => array(
       'label' => 'Name wrapper',
       'instance_settings' => array(
-        'classes' => '',
+        'id' => '',
+        'classes' => 'group-wrapper-name field-group-div',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',

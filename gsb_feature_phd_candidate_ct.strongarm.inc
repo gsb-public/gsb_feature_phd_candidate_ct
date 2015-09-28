@@ -127,6 +127,18 @@ function gsb_feature_phd_candidate_ct_strongarm() {
       'alumni_featured_content' => array(
         'custom_settings' => FALSE,
       ),
+      'compact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'expanded' => array(
+        'custom_settings' => FALSE,
+      ),
+      'event_contacts' => array(
+        'custom_settings' => FALSE,
+      ),
+      'main_list' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
