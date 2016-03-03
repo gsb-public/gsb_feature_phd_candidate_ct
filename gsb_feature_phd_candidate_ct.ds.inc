@@ -656,13 +656,13 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_faculty_advisor_other',
-        1 => 'field_person_fac_single_ref',
+        0 => 'field_person_fac_single_ref',
+        1 => 'field_faculty_advisor_other',
       ),
     ),
     'fields' => array(
-      'field_faculty_advisor_other' => 'ds_content',
       'field_person_fac_single_ref' => 'ds_content',
+      'field_faculty_advisor_other' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -673,6 +673,7 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['field_collection_item|field_faculty_advisors|default'] = $ds_layout;
 

@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gsb_feature_phd_candidate_ct_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -43,7 +43,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_academic_information|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_academic_information|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -81,7 +81,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_id_card|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_id_card|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -110,7 +110,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_job_market_paper|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_job_market_paper|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -138,7 +138,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_papers_publications|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_papers_publications|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -165,7 +165,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_publications|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_publications|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -192,7 +192,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_work_in_progress|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_work_in_progress|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -219,7 +219,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_working_papers|node|phd_candidate|form'] = $field_group;
+  $field_groups['group_working_papers|node|phd_candidate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -253,7 +253,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_information|node|phd_candidate|default'] = $field_group;
+  $field_groups['group_wrapper_information|node|phd_candidate|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -287,7 +287,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_jobpaper|node|phd_candidate|default'] = $field_group;
+  $field_groups['group_wrapper_jobpaper|node|phd_candidate|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -322,7 +322,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_link|node|phd_candidate|default'] = $field_group;
+  $field_groups['group_wrapper_link|node|phd_candidate|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -358,7 +358,20 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_name|node|phd_candidate|default'] = $field_group;
+  $field_groups['group_wrapper_name|node|phd_candidate|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Academic Information');
+  t('Information wrapper');
+  t('Job Market Paper');
+  t('Link wrapper');
+  t('Name wrapper');
+  t('Papers & Publications ');
+  t('Personal Information');
+  t('Publications');
+  t('Work in Progress');
+  t('Working Papers');
+
+  return $field_groups;
 }

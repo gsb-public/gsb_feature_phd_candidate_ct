@@ -93,6 +93,7 @@ features[node][] = phd_candidate
 features[variable][] = auto_entitylabel_node_phd_candidate
 features[variable][] = auto_entitylabel_pattern_node_phd_candidate
 features[variable][] = auto_entitylabel_php_node_phd_candidate
+features[variable][] = field_bundle_settings_field_collection_item__field_faculty_advisors
 features[variable][] = field_bundle_settings_node__phd_candidate
 features[variable][] = menu_options_phd_candidate
 features[variable][] = menu_parent_phd_candidate

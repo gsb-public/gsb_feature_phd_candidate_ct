@@ -10,7 +10,7 @@
 function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-phd_candidate-field_academic_area_single'
+  // Exported field_instance: 'node-phd_candidate-field_academic_area_single'.
   $field_instances['node-phd_candidate-field_academic_area_single'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -85,7 +85,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_academic_institution'
+  // Exported field_instance: 'node-phd_candidate-field_academic_institution'.
   $field_instances['node-phd_candidate-field_academic_institution'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -158,7 +158,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_description'
+  // Exported field_instance: 'node-phd_candidate-field_description'.
   $field_instances['node-phd_candidate-field_description'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -236,7 +236,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_dissertation'
+  // Exported field_instance: 'node-phd_candidate-field_dissertation'.
   $field_instances['node-phd_candidate-field_dissertation'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -328,7 +328,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_email'
+  // Exported field_instance: 'node-phd_candidate-field_email'.
   $field_instances['node-phd_candidate-field_email'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -410,7 +410,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_faculty_advisors'
+  // Exported field_instance: 'node-phd_candidate-field_faculty_advisors'.
   $field_instances['node-phd_candidate-field_faculty_advisors'] = array(
     'bundle' => 'phd_candidate',
     'custom_add_another' => '',
@@ -486,7 +486,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_file_job_market_paper'
+  // Exported field_instance: 'node-phd_candidate-field_file_job_market_paper'.
   $field_instances['node-phd_candidate-field_file_job_market_paper'] = array(
     'bundle' => 'phd_candidate',
     'custom_add_another' => '',
@@ -582,7 +582,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_file_single_public'
+  // Exported field_instance: 'node-phd_candidate-field_file_single_public'.
   $field_instances['node-phd_candidate-field_file_single_public'] = array(
     'bundle' => 'phd_candidate',
     'custom_add_another' => '',
@@ -684,7 +684,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_first_name'
+  // Exported field_instance: 'node-phd_candidate-field_first_name'.
   $field_instances['node-phd_candidate-field_first_name'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -766,7 +766,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_image_single_public'
+  // Exported field_instance: 'node-phd_candidate-field_image_single_public'.
   $field_instances['node-phd_candidate-field_image_single_public'] = array(
     'bundle' => 'phd_candidate',
     'custom_add_another' => '',
@@ -893,7 +893,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_job_display'
+  // Exported field_instance: 'node-phd_candidate-field_job_display'.
   $field_instances['node-phd_candidate-field_job_display'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => array(
@@ -964,7 +964,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_job_market_paper_desc'
+  // Exported field_instance: 'node-phd_candidate-field_job_market_paper_desc'.
   $field_instances['node-phd_candidate-field_job_market_paper_desc'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1042,7 +1042,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_last_name'
+  // Exported field_instance: 'node-phd_candidate-field_last_name'.
   $field_instances['node-phd_candidate-field_last_name'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1124,7 +1124,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_link_google_scholar'
+  // Exported field_instance: 'node-phd_candidate-field_link_google_scholar'.
   $field_instances['node-phd_candidate-field_link_google_scholar'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1222,7 +1222,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_link_linkedin'
+  // Exported field_instance: 'node-phd_candidate-field_link_linkedin'.
   $field_instances['node-phd_candidate-field_link_linkedin'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1314,7 +1314,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_link_single'
+  // Exported field_instance: 'node-phd_candidate-field_link_single'.
   $field_instances['node-phd_candidate-field_link_single'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1406,7 +1406,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_link_website'
+  // Exported field_instance: 'node-phd_candidate-field_link_website'.
   $field_instances['node-phd_candidate-field_link_website'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1498,7 +1498,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_middle_name'
+  // Exported field_instance: 'node-phd_candidate-field_middle_name'.
   $field_instances['node-phd_candidate-field_middle_name'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1580,7 +1580,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_phd_research_interests'
+  // Exported field_instance: 'node-phd_candidate-field_phd_research_interests'.
   $field_instances['node-phd_candidate-field_phd_research_interests'] = array(
     'bundle' => 'phd_candidate',
     'custom_add_another' => '',
@@ -1717,7 +1717,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_publications'
+  // Exported field_instance: 'node-phd_candidate-field_publications'.
   $field_instances['node-phd_candidate-field_publications'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1787,7 +1787,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_research_statement'
+  // Exported field_instance: 'node-phd_candidate-field_research_statement'.
   $field_instances['node-phd_candidate-field_research_statement'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1865,7 +1865,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_salutation'
+  // Exported field_instance: 'node-phd_candidate-field_salutation'.
   $field_instances['node-phd_candidate-field_salutation'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -1947,7 +1947,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_search_field'
+  // Exported field_instance: 'node-phd_candidate-field_search_field'.
   $field_instances['node-phd_candidate-field_search_field'] = array(
     'bundle' => 'phd_candidate',
     'deleted' => 0,
@@ -2045,7 +2045,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_submit'
+  // Exported field_instance: 'node-phd_candidate-field_submit'.
   $field_instances['node-phd_candidate-field_submit'] = array(
     'bundle' => 'phd_candidate',
     'deleted' => 0,
@@ -2110,7 +2110,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_suffix_name'
+  // Exported field_instance: 'node-phd_candidate-field_suffix_name'.
   $field_instances['node-phd_candidate-field_suffix_name'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -2186,7 +2186,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_teaching_statement'
+  // Exported field_instance: 'node-phd_candidate-field_teaching_statement'.
   $field_instances['node-phd_candidate-field_teaching_statement'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -2264,7 +2264,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_work_in_progress'
+  // Exported field_instance: 'node-phd_candidate-field_work_in_progress'.
   $field_instances['node-phd_candidate-field_work_in_progress'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -2340,7 +2340,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_working_papers'
+  // Exported field_instance: 'node-phd_candidate-field_working_papers'.
   $field_instances['node-phd_candidate-field_working_papers'] = array(
     'bundle' => 'phd_candidate',
     'default_value' => NULL,
@@ -2416,7 +2416,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_year'
+  // Exported field_instance: 'node-phd_candidate-field_year'.
   $field_instances['node-phd_candidate-field_year'] = array(
     'bundle' => 'phd_candidate',
     'deleted' => 0,
