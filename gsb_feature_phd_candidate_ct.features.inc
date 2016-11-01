@@ -20,6 +20,25 @@ function gsb_feature_phd_candidate_ct_ctools_plugin_api($module = NULL, $api = N
 }
 
 /**
+ * Implements hook_menu_position_default_menu_positions().
+ */
+function gsb_feature_phd_candidate_ct_menu_position_default_menu_positions() {
+  $items = array(
+    'phd_candidate_ct' => array(
+      'admin_title' => 'PhD Candidate - CT',
+      'enabled' => 1,
+      'conditions' => 'a:1:{s:12:"content_type";a:1:{s:12:"content_type";a:1:{s:13:"phd_candidate";s:13:"phd_candidate";}}}',
+      'menu_name' => 'section-12481',
+      'plid' => 37366,
+      'mlid' => 91113,
+      'weight' => 0,
+      'machine_name' => 'phd_candidate_ct',
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_node_info().
  */
 function gsb_feature_phd_candidate_ct_node_info() {

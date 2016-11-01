@@ -89,6 +89,7 @@ features[field_instance][] = node-phd_candidate-field_teaching_statement
 features[field_instance][] = node-phd_candidate-field_work_in_progress
 features[field_instance][] = node-phd_candidate-field_working_papers
 features[field_instance][] = node-phd_candidate-field_year
+features[menu_position][] = phd_candidate_ct
 features[node][] = phd_candidate
 features[variable][] = auto_entitylabel_node_phd_candidate
 features[variable][] = auto_entitylabel_pattern_node_phd_candidate
