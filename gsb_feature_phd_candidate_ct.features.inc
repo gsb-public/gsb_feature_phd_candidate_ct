@@ -30,7 +30,7 @@ function gsb_feature_phd_candidate_ct_menu_position_default_menu_positions() {
       'conditions' => 'a:1:{s:12:"content_type";a:1:{s:12:"content_type";a:1:{s:13:"phd_candidate";s:13:"phd_candidate";}}}',
       'menu_name' => 'section-12481',
       'plid' => 37366,
-      'mlid' => 91113,
+      'mlid' => 91416,
       'weight' => 0,
       'machine_name' => 'phd_candidate_ct',
     ),
