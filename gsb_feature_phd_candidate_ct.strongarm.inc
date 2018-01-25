@@ -180,6 +180,9 @@ function gsb_feature_phd_candidate_ct_strongarm() {
         'redirect' => array(
           'weight' => '12',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),
@@ -244,6 +247,16 @@ function gsb_feature_phd_candidate_ct_strongarm() {
   $strongarm->name = 'workbench_moderation_default_state_phd_candidate';
   $strongarm->value = 'draft';
   $export['workbench_moderation_default_state_phd_candidate'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_phd_candidate';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_phd_candidate'] = $strongarm;
 
   return $export;
 }

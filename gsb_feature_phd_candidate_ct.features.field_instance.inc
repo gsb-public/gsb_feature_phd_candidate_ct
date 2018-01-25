@@ -10,6 +10,173 @@
 function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_collection_item-field_job_market_paper-field_file_job_market_paper'.
+  $field_instances['field_collection_item-field_job_market_paper-field_file_job_market_paper'] = array(
+    'bundle' => 'field_job_market_paper',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'file_default',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_file_job_market_paper',
+    'label' => 'Paper',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'description_field' => 0,
+      'file_directory' => 'phd-job-market-paper',
+      'file_extensions' => 'pdf',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '',
+        ),
+        'replace_existing_files' => 0,
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 0,
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 34,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_job_market_paper-field_job_market_paper_desc'.
+  $field_instances['field_collection_item-field_job_market_paper-field_job_market_paper_desc'] = array(
+    'bundle' => 'field_job_market_paper',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_job_market_paper_desc',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 36,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_job_market_paper-field_link_single'.
+  $field_instances['field_collection_item-field_job_market_paper-field_link_single'] = array(
+    'bundle' => 'field_job_market_paper',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'link_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_link_single',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_label_use_field_label' => 1,
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 32,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-phd_candidate-field_academic_area_single'.
   $field_instances['node-phd_candidate-field_academic_area_single'] = array(
     'bundle' => 'phd_candidate',
@@ -486,102 +653,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_file_job_market_paper'.
-  $field_instances['node-phd_candidate-field_file_job_market_paper'] = array(
-    'bundle' => 'phd_candidate',
-    'custom_add_another' => '',
-    'custom_remove' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'gsb_field_formatter',
-        'settings' => array(
-          'conditions' => array(),
-          'file_view_mode' => 'default',
-          'text' => 'PDF',
-        ),
-        'type' => 'gsb_field_formatter_download_link',
-        'weight' => 11,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'people_fpp' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 26,
-      ),
-      'phd_job_market_candidate' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 35,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_file_job_market_paper',
-    'label' => 'Paper',
-    'required' => 0,
-    'settings' => array(
-      'custom_add_another' => '',
-      'custom_remove' => '',
-      'description_field' => 0,
-      'file_directory' => 'phd-job-market-paper',
-      'file_extensions' => 'pdf',
-      'filefield_paths' => array(
-        'active_updating' => 0,
-        'file_name' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
-        ),
-        'file_path' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => '',
-        ),
-        'retroactive_update' => 0,
-      ),
-      'filefield_paths_enabled' => 0,
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 18,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-phd_candidate-field_file_single_public'.
   $field_instances['node-phd_candidate-field_file_single_public'] = array(
     'bundle' => 'phd_candidate',
@@ -965,21 +1036,28 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-phd_candidate-field_job_market_paper_desc'.
-  $field_instances['node-phd_candidate-field_job_market_paper_desc'] = array(
+  // Exported field_instance: 'node-phd_candidate-field_job_market_paper'.
+  $field_instances['node-phd_candidate-field_job_market_paper'] = array(
     'bundle' => 'phd_candidate',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
+        'module' => 'field_collection',
         'settings' => array(
+          'add' => 'Add',
           'conditions' => array(),
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
         ),
-        'type' => 'text_default',
-        'weight' => 12,
+        'type' => 'field_collection_view',
+        'weight' => 28,
       ),
       'featured' => array(
         'label' => 'above',
@@ -987,23 +1065,17 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ical' => array(
+      'people_fpp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'people_fpp' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
       'phd_job_market_candidate' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1014,31 +1086,20 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_job_market_paper_desc',
-    'label' => 'Description',
+    'field_name' => 'field_job_market_paper',
+    'label' => 'Job Market Paper',
     'required' => 0,
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => '',
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_truncate_html' => 0,
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 19,
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 31,
     ),
     'workbench_access_field' => 0,
   );
@@ -1311,98 +1372,6 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
       ),
       'type' => 'link_field',
       'weight' => 8,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-phd_candidate-field_link_single'.
-  $field_instances['node-phd_candidate-field_link_single'] = array(
-    'bundle' => 'phd_candidate',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'link_default',
-        'weight' => 10,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'people_fpp' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'phd_job_market_candidate' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_link_single',
-    'label' => 'Title',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => '_blank',
-        'title' => '',
-      ),
-      'custom_add_another' => '',
-      'custom_remove' => '',
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'rel_remove' => 'default',
-      'title' => 'required',
-      'title_label_use_field_label' => TRUE,
-      'title_maxlength' => 255,
-      'title_value' => '',
-      'url' => 'optional',
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
-      'type' => 'link_field',
-      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -1783,7 +1752,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 12,
+      'weight' => 32,
     ),
     'workbench_access_field' => 0,
   );
@@ -2516,6 +2485,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
   t('Go to the LinkedIn <a href="https://www.linkedin.com/profile/public-profile-settings">Public Profile Settings page</a> to get your Public Profile link.');
   t('Google Scholar');
   t('Graduation Year');
+  t('Job Market Paper');
   t('Last Name');
   t('LinkedIn');
   t('Middle Name');

@@ -753,15 +753,15 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_body',
+        0 => 'field_link_single',
         1 => 'field_file_single_public',
-        2 => 'field_link_single',
+        2 => 'field_body',
       ),
     ),
     'fields' => array(
-      'field_body' => 'ds_content',
-      'field_file_single_public' => 'ds_content',
       'field_link_single' => 'ds_content',
+      'field_file_single_public' => 'ds_content',
+      'field_body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -772,6 +772,7 @@ function gsb_feature_phd_candidate_ct_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['field_collection_item|field_working_papers|phd_job_market_candidate'] = $ds_layout;
 

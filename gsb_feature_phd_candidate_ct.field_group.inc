@@ -26,11 +26,10 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       0 => 'field_academic_area_single',
       1 => 'field_description',
       2 => 'field_dissertation',
-      3 => 'field_person_fac_ref',
-      4 => 'field_phd_research_interests',
-      5 => 'field_research_statement',
-      6 => 'field_teaching_statement',
-      7 => 'field_faculty_advisors',
+      3 => 'field_phd_research_interests',
+      4 => 'field_research_statement',
+      5 => 'field_teaching_statement',
+      6 => 'field_faculty_advisors',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -99,6 +98,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
       0 => 'field_file_job_market_paper',
       1 => 'field_job_market_paper_desc',
       2 => 'field_link_single',
+      3 => 'field_job_market_paper',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
