@@ -240,7 +240,7 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'h1',
           'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -273,7 +273,7 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'h1',
           'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -338,7 +338,7 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'h1',
           'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -400,7 +400,7 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'h1',
           'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -413,7 +413,7 @@ function gsb_feature_phd_candidate_ct_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'h1',
           'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
