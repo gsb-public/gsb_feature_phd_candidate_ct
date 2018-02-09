@@ -176,7 +176,11 @@ function gsb_feature_phd_candidate_ct_field_extra_fields() {
  * Implements hook_entity_view().
  */
 function gsb_feature_phd_candidate_ct_entity_view($entity, $type, $view_mode, $langcode) {
-  if ($type != "node" && $entity->type != "phd_candidate") {
+  if ($type != "node") {
+    return;
+  }
+
+  if ($entity->type != "phd_candidate") {
     return;
   }
 
