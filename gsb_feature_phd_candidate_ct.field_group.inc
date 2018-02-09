@@ -232,7 +232,7 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Information wrapper',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_email',
       1 => 'phd_address',
@@ -266,11 +266,9 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Job Market Paper',
-    'weight' => '10',
+    'weight' => '9',
     'children' => array(
-      0 => 'field_file_job_market_paper',
-      1 => 'field_job_market_paper_desc',
-      2 => 'field_link_single',
+      0 => 'field_job_market_paper',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -335,13 +333,9 @@ function gsb_feature_phd_candidate_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Name wrapper',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
-      0 => 'field_first_name',
-      1 => 'field_last_name',
-      2 => 'field_middle_name',
-      3 => 'field_salutation',
-      4 => 'field_suffix_name',
+      0 => 'full_name',
     ),
     'format_type' => 'div',
     'format_settings' => array(
