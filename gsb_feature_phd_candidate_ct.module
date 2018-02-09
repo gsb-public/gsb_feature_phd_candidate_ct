@@ -160,3 +160,37 @@ function gsb_feature_phd_candidate_ct_menu_local_tasks_alter(&$data, $router_ite
   }  
 }  
 
+/**
+ * Implements hook_field_extra_fields().
+ */
+function gsb_feature_phd_candidate_ct_field_extra_fields() {
+  $extra['node']['phd_candidate']['display']['full_name'] = array(
+    'label' => t('Full Name'),
+    'description' => t('Full Name H1 wrapper'),
+    'weight' => 1,
+  );
+  return $extra;
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function gsb_feature_phd_candidate_ct_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($type != "node" && $entity->type != "phd_candidate") {
+    return;
+  }
+
+  $fields = field_extra_fields_get_display('node', $entity->type, $view_mode);
+  if (empty($fields['full_name']['visible'])) {
+    return;
+  }
+
+  // create the full name mark up
+  $wrapper = entity_metadata_wrapper($type, $entity);
+  $markup = '<h1 class="group-full-name">' . $wrapper->field_salutation->value() . ' ' . $wrapper->field_first_name->value() .
+  ' ' . $wrapper->field_middle_name->value() .' ' . $wrapper->field_last_name->value() .
+  ' ' . $wrapper->field_suffix_name->value() .'</h1>';
+  $container['full_name'] = array('#markup' => $markup);
+
+  $entity->content['full_name'] = $container;
+}
