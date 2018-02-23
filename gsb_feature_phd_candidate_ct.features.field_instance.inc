@@ -23,7 +23,11 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'gsb_field_formatter',
         'settings' => array(
-          'conditions' => array(),
+          'conditions' => array(
+            0 => array(
+              'condition' => '',
+            ),
+          ),
           'file_view_mode' => 'default',
           'text' => 'PDF',
         ),
