@@ -20,12 +20,14 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
+        'label' => 'hidden',
+        'module' => 'gsb_field_formatter',
         'settings' => array(
           'conditions' => array(),
+          'file_view_mode' => 'default',
+          'text' => 'PDF',
         ),
-        'type' => 'file_default',
+        'type' => 'gsb_field_formatter_download_link',
         'weight' => 1,
       ),
     ),
@@ -84,7 +86,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
@@ -124,7 +126,7 @@ function gsb_feature_phd_candidate_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'conditions' => array(),
